@@ -5,26 +5,44 @@
   <script src="js/jquery.js" type="text/javascript"></script>
   <script src="js/underscore_dev.js" type="text/javascript"></script>
   <script src="js/backbone.js" type="text/javascript"></script>
-  <script type="text/javascript" src='js/backbone_dual_store.js'></script>
   <script type="text/javascript" src='js/app.js'></script>
   <script type="text/javascript" src='js/templayed.js'></script>
 </head>
+
 <body>
 <header>Radio Collar</header>
 <nav>Nav here...</nav>
 <section id='content'>
+  <div>
+    <input type="text" id="email" placeholder="User ID" tabindex="2" name="userID" maxlength="255">
+  </div>
+  <div>
+    <input type="password" placeholder="Password" tabindex="3" class="password hide" id="password" name="password" maxlength="32">
+  </div>
+  <input type="hidden" name="secretField" value="probablyAnId">
+  <div>
+    <a href="nothing.com">
+      Register Now
+    </a>
+  </div>
+  <div>
+    <input type="checkbox" id="login-remember" tabindex="6" name="rememberOption">
+    Remember User ID
+  </div>
+  <div>
+    <a href="#" id= 'go'>Login now.</a>
+  </div>
 </section>
-<script type="text/template" id="gpsCtrlTmpl">
+
+<script type="text/template" id="newGpsTmpl">
   <form>
       <input class="input" id="sendName" name="name" type="text" placeholder="name" value='{{#title}} {{ title }} {{/title}}'>
-      <br>
       <input class="input" id="lat" name="lat" type="text" placeholder="Waiting for longitude data..." value='pending'>
-      <br>
       <input class="input" id="lng" name="lng" type="text" placeholder="Waiting for latitude data..." value='pending'>
-      <br>
       <a href="#" class="btn" id="send">Send</a>
   </form>
 </script>
-<footer>(c) 2012, I don't use unicdoe characters</footer>
+
+<footer>(c) 2012, I don't use unicode characters</footer>
 </body>
 </html>

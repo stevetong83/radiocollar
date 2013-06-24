@@ -4,7 +4,7 @@
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
-  this.server_url = 'localhost:3000/api/v1';
+  this.server_url = 'https://radiocollarapp.herokuapp.com/api/v1';
 
   $(function() {
     var _ref, _ref1, _ref2, _ref3;
@@ -18,9 +18,9 @@
 
       Place.prototype.idAttribute = "_id";
 
-      Place.prototype.initialize = function() {
+      Place.prototype.initialize = function(params) {
         return this.set({
-          title: this.get("title")
+          title: params.title
         });
       };
 

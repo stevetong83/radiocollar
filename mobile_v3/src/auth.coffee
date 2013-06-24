@@ -1,34 +1,38 @@
-$.support.cors = true;
-
 $ ->
-window.sendd = (url, meth, data1) ->
-  $.ajax
-    type: meth
-    url: "http://localhost:3000/api/v1/#{url}"
-    crossDomain: true
-    data: data1
-    dataType: "json"
-    success: (data) ->
-      alert data
-    error: (responseData, textStatus, errorThrown) ->
-     alert 'newp!'
-     debugger
+  $('#go').on 'click', ->
+    $.ajax
+      type: 'POST'
+      url: "http://radiocollarapp.herokuapp.com/api/v1/sessions"
+      data: {"email": $('#email').val(), "password": $('#password').val()}
+      dataType: "json"
+      success: (data) ->
+        #grab the token
+        window.token = $.parseJSON(responseData.responseText).token
+        #Add the token to AJAX HTTP headers
+        $.ajaxSetup({ headers : { "auth_token" : window.token } });
+        #Clear the screen
+        $('#content').empty()
+        #Hit backbone's 'home' route. Not yet implemented.
+        window.location = '#home'
+      error: (responseData) ->
+        #Popup an alert with the server response.
+        alert $.parseJSON(responseData.responseText).errors
 
-
-
-
-
-  # $("#go").click (e) ->
-  #   $.ajax
-  #     type: "GET"
-  #     url: "http://localhost:3000/api/v1/sessions"
-  #     crossDomain: true
-  #     type: 'jsonp'
-  #     context: document.body
-  #     data:
-  #       email: $("#email").val()
-  #       password: $("#password").val()
-  #       _method: 'POST'
-
-  #     success: (data) ->
-  #       console.log data
+# Sample for testing locally
+# function () {
+#     return $.ajax({
+#       type: 'POST',
+#       url: "https://radiocollarapp.herokuapp.com/api/v1/sessions",
+#       data: {
+#         "email": "test@test.com",
+#         "password": "password"
+#       },
+#       dataType: "json",
+#       success: function(data) {
+#         return data;
+#       },
+#       error: function(responseData, textStatus, errorThrown) {
+#         return console.error('error!');
+#       }
+#     });
+#   }
