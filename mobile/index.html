@@ -1,33 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>RadioCollar</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<head>
+  <title>Unpopular Ideas</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/jquery.js" type="text/javascript"></script>
+  <script src="js/underscore_dev.js" type="text/javascript"></script>
+  <script src="js/backbone.js" type="text/javascript"></script>
+  <script type="text/javascript" src='js/app.js'></script>
+  <script type="text/javascript" src='js/templayed.js'></script>
+</head>
 
-    <!-- Loading Bootstrap -->
-    <link href="css/style.css" rel="stylesheet">
-    <!-- Javascript -->
-    <script type="phonegap.js"></script>
-    <script src="js/underscore.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/theatre.js"></script>
-    <script src='js/compass.js'></script>
-<<<<<<< HEAD
+<body>
+<header>Radio Collar</header>
+<nav>Nav here...</nav>
+<section id='content'>
+  <div>
+    <input type="text" id="email" placeholder="User ID" tabindex="2" name="userID" maxlength="255">
+  </div>
+  <div>
+    <input type="password" placeholder="Password" tabindex="3" class="password hide" id="password" name="password" maxlength="32">
+  </div>
+  <input type="hidden" name="secretField" value="probablyAnId">
+  <div>
+    <a href="nothing.com">
+      Register Now
+    </a>
+  </div>
+  <div>
+    <input type="checkbox" id="login-remember" tabindex="6" name="rememberOption">
+    Remember User ID
+  </div>
+  <div>
+    <a href="#" id= 'go'>Login now.</a>
+  </div>
+</section>
 
-    <script src='js/app.js'></script>
-    <script src='js/flyjsonp.js'></script>
+<script type="text/template" id="newGpsTmpl">
+  <form>
+      <input class="input" id="sendName" name="name" type="text" placeholder="name" value='{{#title}} {{ title }} {{/title}}'>
+      <input class="input" id="lat" name="lat" type="text" placeholder="Waiting for longitude data..." value='pending'>
+      <input class="input" id="lng" name="lng" type="text" placeholder="Waiting for latitude data..." value='pending'>
+      <a href="#" class="btn" id="send">Send</a>
+  </form>
+</script>
 
-    <script src='js/events.js'></script>
-
-=======
-    <script src='js/app.js'></script>
-    <script src='js/flyjsonp.js'></script>
->>>>>>> 9704b7f754b504941adbb6edd2aead7eb129d5d1
-  </head>
-  <body>
-
-<p>for debugging</p>
-
-  </body>
+<footer>(c) 2012, I don't use unicode characters</footer>
+</body>
 </html>

@@ -1,7 +1,7 @@
 {spawn, exec} = require 'child_process'
 
 task 'dev', 'continually build', ->
-    coffee = spawn 'coffee', ['-cw', '-o', 'js', 'src']
+    coffee = spawn 'coffee', ['-m', '-cw', '-o', 'js', 'src']
     static_here = spawn 'static-here'
     coffee.stdout.on 'data', (data) -> console.log data.toString().trim()
     static_here.stdout.on 'data', (data) -> console.log data.toString().trim()
