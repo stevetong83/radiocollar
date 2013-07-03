@@ -9,11 +9,87 @@
   $(function() {
     var _ref, _ref1, _ref2, _ref3;
     window.Place = (function(_super) {
+      var _ref1, _ref2;
+
       __extends(Place, _super);
 
       function Place() {
         _ref = Place.__super__.constructor.apply(this, arguments);
         return _ref;
+      }
+
+      Place.prototype.idAttribute = "_id";
+
+      Place.prototype.initialize = function(params) {
+        return this.set({
+          title: params.title,
+          lat: params.lat,
+          lng: params.lng
+        });
+      };
+
+      Place.prototype.validate = function(attrs, optns) {
+        if (!this.title || !this.lat || !this.lng) {
+          return "Must have a title and coordinates";
+        }
+      };
+
+      Place.prototype.urlRoot = server_url + "/places";
+
+      window.PlaceList = (function(_super1) {
+        __extends(PlaceList, _super1);
+
+        function PlaceList() {
+          _ref1 = PlaceList.__super__.constructor.apply(this, arguments);
+          return _ref1;
+        }
+
+        PlaceList.prototype.model = Place;
+
+        PlaceList.prototype.url = server_url + "/places";
+
+        return PlaceList;
+
+      })(Backbone.Collection);
+
+      window.PlaceView = (function(_super1) {
+        __extends(PlaceView, _super1);
+
+        function PlaceView() {
+          this.createPlace = __bind(this.createPlace, this);
+          _ref2 = PlaceView.__super__.constructor.apply(this, arguments);
+          return _ref2;
+        }
+
+        PlaceView.prototype.el = $('#content');
+
+        PlaceView.prototype.initialize = function() {
+          this.model.bind('change', this.render);
+          return this.model.view = this;
+        };
+
+        PlaceView.prototype.events = {
+          "click #send": "createPlace"
+        };
+
+        PlaceView.prototype.createPlace = function() {
+          alert('do something here...');
+          return this;
+        };
+
+        return PlaceView;
+
+      })(Backbone.View);
+
+      return Place;
+
+    }).call(this, Backbone.Model);
+    window.Place = (function(_super) {
+      __extends(Place, _super);
+
+      function Place() {
+        _ref1 = Place.__super__.constructor.apply(this, arguments);
+        return _ref1;
       }
 
       Place.prototype.idAttribute = "_id";
@@ -43,8 +119,8 @@
       __extends(Places, _super);
 
       function Places() {
-        _ref1 = Places.__super__.constructor.apply(this, arguments);
-        return _ref1;
+        _ref2 = Places.__super__.constructor.apply(this, arguments);
+        return _ref2;
       }
 
       Places.prototype.model = Place;
@@ -52,19 +128,19 @@
       return Places;
 
     })(Backbone.Collection);
-    window.PlaceNewView = (function(_super) {
+    return window.PlaceNewView = (function(_super) {
       __extends(PlaceNewView, _super);
 
       function PlaceNewView() {
         this.render = __bind(this.render, this);
-        _ref2 = PlaceNewView.__super__.constructor.apply(this, arguments);
-        return _ref2;
+        _ref3 = PlaceNewView.__super__.constructor.apply(this, arguments);
+        return _ref3;
       }
 
       PlaceNewView.prototype.el = $('#content');
 
       PlaceNewView.prototype.initialize = function() {
-        return this.template = templayed($("#gpsCtrlTmpl").html())(this.model);
+        return this.template = null;
       };
 
       PlaceNewView.prototype.events = {
@@ -92,41 +168,10 @@
       return PlaceNewView;
 
     })(Backbone.View);
-    window.RadioCollarRouter = (function(_super) {
-      __extends(RadioCollarRouter, _super);
-
-      function RadioCollarRouter() {
-        _ref3 = RadioCollarRouter.__super__.constructor.apply(this, arguments);
-        return _ref3;
-      }
-
-      RadioCollarRouter.prototype.routes = {
-        "": "home"
-      };
-
-      RadioCollarRouter.prototype.initialize = function() {
-        var pl;
-        pl = new Place({
-          title: 'placeholder. Rendered with backbone. yay!'
-        });
-        return this.plvw = new PlaceNewView({
-          model: pl
-        });
-      };
-
-      RadioCollarRouter.prototype.home = function() {
-        return this.plvw.render();
-      };
-
-      return RadioCollarRouter;
-
-    })(Backbone.Router);
-    window.App = new RadioCollarRouter();
-    return Backbone.history.start();
   });
 
 }).call(this);
 
 /*
-//@ sourceMappingURL=app.map
+//@ sourceMappingURL=app_snippets.map
 */

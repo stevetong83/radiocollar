@@ -1,16 +1,35 @@
-@token             = localStorage.token ? localStorage.token : whereverTheTokenCameFrom
-localStorage.token = @token if @remember_me
-@server_url        = 'https://radiocollarapp.herokuapp.com/api/v1'
+#Nice example: http://jasongiedymin.github.io/backbone-todojs-coffeescript/docs/coffeescript/todos.html
 
+#Make this a global for storing the API URL
+@server_url = 'https://radiocollarapp.herokuapp.com/api/v1'
 $ ->
-  class window.Session extends Backbone.Model
+  class window.Place extends Backbone.Model
+    #Because we use mongo...
     idAttribute: "_id"
-    initialize: (response) ->
-      @token = response
+    initialize: (params) ->
+      @set {title: params.title, lat: params.lat, lng: params.lng}
     validate: (attrs, optns) ->
-      unless @token
-        "Something went wrong."
-    url: server_url + '/session'
+      if (!@title or !@lat or !@lng)
+        "Must have a title and coordinates"
+    urlRoot: server_url + "/places"
+
+    class window.PlaceList extends Backbone.Collection
+      model: Place
+      url: server_url + "/places"
+
+    class window.PlaceView extends Backbone.View
+      el: $('#content')
+      initialize: ->
+        #So that every change on the model calls a view render
+        @model.bind('change', @render)
+        @model.view = @
+      events:
+        "click #send" : "createPlace"
+      createPlace: =>
+        alert 'do something here...'
+        @
+
+#==================== MORE SNIPPETS
 
   class window.Place extends Backbone.Model
     #Since we use mongo...
@@ -41,7 +60,8 @@ $ ->
       # _.bindAll this, "render", "remove"
       # @model.bind "change", @render
       # @model.bind "destroy", @remove
-      @template = templayed($("#gpsCtrlTmpl").html())(@model)
+      #commented this out for now
+      @template = null#templayed($("#gpsCtrlTmpl").html())(@model)
 
     events:
       "click #send": "createPlace"
@@ -62,20 +82,3 @@ $ ->
       #@ for method chaining
       @
 
-  class window.RadioCollarRouter extends Backbone.Router
-    routes:
-      ""      : "home"
-      "/main" : "main"
-      "/login": "login"
-
-    initialize: ->
-      #All the initialization stuff goes here.
-      #RICK: Change this.
-      pl    = new Place {title: 'placeholder. Rendered with backbone. yay!'}
-      @plvw = new PlaceNewView {model: pl}
-    home: ->
-      #construct the home view here...
-      @plvw.render()
-
-  window.App = new RadioCollarRouter()
-  Backbone.history.start()

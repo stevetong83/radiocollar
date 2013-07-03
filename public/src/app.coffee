@@ -1,30 +1,41 @@
-#Nice example: http://jasongiedymin.github.io/backbone-todojs-coffeescript/docs/coffeescript/todos.html
-
-#Make this a global for storing the API URL
-@server_url = 'https://radiocollarapp.herokuapp.com/api/v1'
+# @token             = if localStorage.token then localStorage.token else whereverTheTokenCameFrom
+# localStorage.token = @token if @remember_me
+@server_url  = '/api/v1'
+console.log 'dont forget to change the @server_url to production.'
 $ ->
-  class window.Place extends Backbone.Model
-    #Because we use mongo...
+  class window.Session extends Backbone.Model
     idAttribute: "_id"
-    initialize: (params) ->
-      @set {title: params.title, lat: params.lat, lng: params.lng}
-    validate: (attrs, optns) ->
-      if (!@title or !@lat or !@lng)
-        "Must have a title and coordinates"
-    urlRoot: server_url + "/places"
+    initialize: (options = {}) ->
+      @save(data: {email: 'test@test.com', password: 'password'})
+    # validate: (attrs, optns) ->
+    #   unless @token
+    #     "Something went wrong."
+    url: server_url + '/sessions'
 
-    class window.PlaceList extends Backbone.Collection
-      model: Place
-      url: server_url + "/places"
+  class window.SessionView extends Backbone.View
+    el: $('#content')
+    initialize: ->
+      @template = """<div><input type="text" id="email" placeholder="User ID" tabindex="2" name="userID" maxlength="255"></div><div><input type="password" placeholder="Password" tabindex="3" class="password hide" id="password" name="password" maxlength="32"></div><input type="hidden" name="secretField" value="probablyAnId"><div><input type="checkbox" id="login-remember" tabindex="6" name="rememberOption">Remember User ID</div><div><a href="#" id= 'go'>Login now.</a></div>"""
+      @render()
+    events:
+      "click #go" : "authenticate"
+    render: ->
+      $(@el).html(@template)
+    authenticate: ->
+      window.current_user = new Session()
 
-    class window.PlaceView extends Backbone.View
-      el: $('#content')
-      initialize: ->
-        #So that every change on the model calls a view render
-        @model.bind('change', @render)
-        @model.view = @
-      events:
-        "click #send" : "createPlace"
-      createPlace: =>
-        alert 'do something here...'
-        @
+  class window.RadioCollarRouter extends Backbone.Router
+    routes:
+      ""      : "home"
+      "/main" : "main"
+    initialize: ->
+      #All the initialization stuff goes here.
+      #RICK: Change this.
+      # pl    = new Place {title: 'placeholder. Rendered with backbone. yay!'}
+      # @plvw = new PlaceNewView {model: pl}
+    home: ->
+      #construct the home view here...
+      window.SessionView = new SessionView
+
+  window.App = new RadioCollarRouter()
+  Backbone.history.start()
