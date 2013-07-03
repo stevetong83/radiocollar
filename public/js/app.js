@@ -41,7 +41,7 @@
       SessionView.prototype.el = $('#content');
 
       SessionView.prototype.initialize = function() {
-        this.template = "<div><input type=\"text\" id=\"email\" placeholder=\"User ID\" tabindex=\"2\" name=\"userID\" maxlength=\"255\"></div><div><input type=\"password\" placeholder=\"Password\" tabindex=\"3\" class=\"password hide\" id=\"password\" name=\"password\" maxlength=\"32\"></div><input type=\"hidden\" name=\"secretField\" value=\"probablyAnId\"><div><input type=\"checkbox\" id=\"login-remember\" tabindex=\"6\" name=\"rememberOption\">Remember User ID</div><div><a href=\"#\" id= 'go'>Login now.</a></div>";
+        this.template = "<form id='sessionCreate'><div><input type=\"text\" id=\"email\" placeholder=\"User ID\" tabindex=\"2\" name=\"userID\" maxlength=\"255\"></div><div><input type=\"password\" placeholder=\"Password\" tabindex=\"3\" class=\"password hide\" id=\"password\" name=\"password\" maxlength=\"32\"></div><input type=\"hidden\" name=\"secretField\" value=\"probablyAnId\"><div><input type=\"checkbox\" id=\"login-remember\" tabindex=\"6\" name=\"rememberOption\">Remember User ID</div><div><a href=\"#\" id= 'go'>Login now.</a></div></form>";
         this.model = new Session();
         return this.render();
       };
@@ -55,11 +55,19 @@
       };
 
       SessionView.prototype.authenticate = function() {
-        this.model.set('email', $('#email').val());
-        this.model.set('password', $('#password').val());
-        if (this.model.save()) {
-          return window.current_user = this.model;
-        }
+        return this.model.save({
+          email: $('#email').val(),
+          password: $('#password').val()
+        }, {
+          success: (function() {
+            return App.navigate('/main', {
+              trigger: true
+            });
+          }),
+          error: function(one, two, three) {
+            return alert('Failed to login. Check your email, password and internet connection.');
+          }
+        });
       };
 
       return SessionView;
@@ -75,13 +83,18 @@
 
       RadioCollarRouter.prototype.routes = {
         "": "home",
-        "/main": "main"
+        "main": "main"
       };
 
       RadioCollarRouter.prototype.initialize = function() {};
 
       RadioCollarRouter.prototype.home = function() {
-        return window.SessionView = new SessionView;
+        return window.sessionView = new SessionView;
+      };
+
+      RadioCollarRouter.prototype.main = function() {
+        $('#content').empty();
+        return alert('Welcome. Now put something useful into the main() route.');
       };
 
       return RadioCollarRouter;
