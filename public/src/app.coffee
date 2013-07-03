@@ -6,7 +6,6 @@ $ ->
   class window.Session extends Backbone.Model
     idAttribute: "_id"
     initialize: (options = {}) ->
-      @save(data: {email: 'test@test.com', password: 'password'})
     # validate: (attrs, optns) ->
     #   unless @token
     #     "Something went wrong."
@@ -16,13 +15,16 @@ $ ->
     el: $('#content')
     initialize: ->
       @template = """<div><input type="text" id="email" placeholder="User ID" tabindex="2" name="userID" maxlength="255"></div><div><input type="password" placeholder="Password" tabindex="3" class="password hide" id="password" name="password" maxlength="32"></div><input type="hidden" name="secretField" value="probablyAnId"><div><input type="checkbox" id="login-remember" tabindex="6" name="rememberOption">Remember User ID</div><div><a href="#" id= 'go'>Login now.</a></div>"""
+      @model = new Session()
       @render()
     events:
       "click #go" : "authenticate"
     render: ->
       $(@el).html(@template)
     authenticate: ->
-      window.current_user = new Session()
+      @model.set 'email', $('#email').val()
+      @model.set 'password', $('#password').val()
+      window.current_user = @model if @model.save()
 
   class window.RadioCollarRouter extends Backbone.Router
     routes:

@@ -8674,3 +8674,131 @@ Processing by Api::V1::SessionsController#create as JSON
 WARNING: Can't verify CSRF token authenticity
   MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"email"=>"test@test.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4773ms)
 Completed 200 OK in 90ms (Views: 0.2ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2013-07-02 21:09:52 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"data"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "session"=>{"data"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4282ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"email"=>"test@test.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5951ms)
+Completed 200 OK in 91ms (Views: 0.2ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2013-07-02 21:11:12 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"data"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "session"=>{"data"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"email"=>"test@test.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5720ms)
+Completed 200 OK in 85ms (Views: 0.2ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2013-07-02 21:12:04 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"data"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "session"=>{"data"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"email"=>"test@test.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5078ms)
+Completed 200 OK in 83ms (Views: 0.2ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2013-07-02 21:12:19 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"data"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "session"=>{"data"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"email"=>"test@test.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4959ms)
+Completed 200 OK in 83ms (Views: 0.2ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2013-07-02 21:12:58 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/api/v1/sessions_controller.rb:17:in `create'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.2ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2013-07-02 21:20:34 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/api/v1/sessions_controller.rb:17:in `create'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (34.2ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (53.5ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2013-07-02 21:21:24 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/api/v1/sessions_controller.rb:17:in `create'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.6ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2013-07-02 21:23:48 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{}}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.3819ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"email"=>""}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3519ms)
+Completed 401 Unauthorized in 18ms (Views: 0.2ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2013-07-02 21:24:07 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"password"=>"[FILTERED]", "session"=>{"password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"email"=>""}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4511ms)
+Completed 401 Unauthorized in 1ms (Views: 0.2ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2013-07-02 21:25:42 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"email"=>"test@test.com", "session"=>{"email"=>"test@test.com"}}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"email"=>"test@test.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5510ms)
+Completed 401 Unauthorized in 83ms (Views: 0.2ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2013-07-02 21:26:07 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"email"=>"test@test.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5088ms)
+Completed 200 OK in 83ms (Views: 0.2ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2013-07-02 21:33:10 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.3409ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"email"=>"test@test.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5519ms)
+Completed 200 OK in 84ms (Views: 0.2ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2013-07-02 21:33:18 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "authentication_token"=>"6DfasiksLMsWpVuVKofH", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "authentication_token"=>"6DfasiksLMsWpVuVKofH"}}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"email"=>"test@test.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5431ms)
+Completed 200 OK in 85ms (Views: 0.2ms)

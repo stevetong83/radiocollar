@@ -14,9 +14,9 @@ class Api::V1::SessionsController < Api::V1::ApiController
   def create
     #ex: curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d ' {"email":"rick.carlino@gmail.com","password":"testaccount"}'  http://localhost:3000/api/v1/sessions
 
-    user = User.find_for_database_authentication(email: params[:data][:email])
+    user = User.find_for_database_authentication(email: params[:session][:email])
  
-    if user && user.valid_password?(params[:data][:password])
+    if user && user.valid_password?(params[:session][:password])
       user.ensure_authentication_token!  # make sure the user has a token generated
       # render :inline => "#{params[:callback]}('hi')"
       render json: { authentication_token: user.authentication_token }, success: true, status: :ok

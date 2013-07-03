@@ -23,12 +23,6 @@
         if (options == null) {
           options = {};
         }
-        return this.save({
-          data: {
-            email: 'test@test.com',
-            password: 'password'
-          }
-        });
       };
 
       Session.prototype.url = server_url + '/sessions';
@@ -48,6 +42,7 @@
 
       SessionView.prototype.initialize = function() {
         this.template = "<div><input type=\"text\" id=\"email\" placeholder=\"User ID\" tabindex=\"2\" name=\"userID\" maxlength=\"255\"></div><div><input type=\"password\" placeholder=\"Password\" tabindex=\"3\" class=\"password hide\" id=\"password\" name=\"password\" maxlength=\"32\"></div><input type=\"hidden\" name=\"secretField\" value=\"probablyAnId\"><div><input type=\"checkbox\" id=\"login-remember\" tabindex=\"6\" name=\"rememberOption\">Remember User ID</div><div><a href=\"#\" id= 'go'>Login now.</a></div>";
+        this.model = new Session();
         return this.render();
       };
 
@@ -60,7 +55,11 @@
       };
 
       SessionView.prototype.authenticate = function() {
-        return window.current_user = new Session();
+        this.model.set('email', $('#email').val());
+        this.model.set('password', $('#password').val());
+        if (this.model.save()) {
+          return window.current_user = this.model;
+        }
       };
 
       return SessionView;
