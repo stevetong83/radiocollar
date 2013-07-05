@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
 protect_from_forgery
+#TODO: Do we actually need this?
 before_filter :set_access_control_headers
 
 def set_access_control_headers

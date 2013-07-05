@@ -14,7 +14,7 @@
       }
       this._parseGPS = __bind(this._parseGPS, this);
       this.lat = 0;
-      this.lng = 0;
+      this.long = 0;
       this.alt = 0;
       this.acc = 0;
       this.altAcc = 0;
@@ -29,7 +29,7 @@
 
     Compass.prototype._parseGPS = function(position) {
       this.lat = position.coords.latitude;
-      this.lng = position.coords.longitude;
+      this.long = position.coords.longitude;
       this.alt = position.coords.altitude;
       this.acc = position.coords.accuracy;
       this.altAcc = position.coords.altitudeAccuracy;
@@ -40,18 +40,14 @@
     Compass.prototype._parseErr = function(err) {
       switch (err.code) {
         case 1:
-          this.error = 'Permission denied by user';
-          break;
+          return this.error = 'Permission denied by user. Is your GPS enabled?';
         case 2:
-          this.error = 'Cant fix GPS position';
-          break;
+          return this.error = 'Cant fix GPS position. Are you in an area of poor reception?';
         case 3:
-          this.error = 'GPS is taking too long to respond';
-          break;
+          return this.error = 'GPS is taking too long to respond. Try restarting.';
         default:
-          this.error = 'Well, this is embarassing...';
+          return this.error = 'An unknown error has occured. Ensure your devices GPS module is enabled and that you are in an area of adequate GPS reception.';
       }
-      return console.log(this.error);
     };
 
     Compass.prototype.stop = function() {
@@ -63,14 +59,6 @@
   })();
 
   window.compass = new Compass();
-
-  $(function() {
-    return setInterval(function() {
-      var message;
-      message = "LAT: " + compass.lat + " LNG: " + compass.lng + " ALT: " + compass.alt + " ACC: " + compass.acc + " ALTACC: " + compass.altacc + " HDG: " + compass.hdg + " SPD: " + compass.spd + " ";
-      return $('#info').text(message);
-    }, 200);
-  });
 
 }).call(this);
 

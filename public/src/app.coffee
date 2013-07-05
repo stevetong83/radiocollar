@@ -21,8 +21,35 @@ $ ->
       "click #go" : "authenticate"
     render: ->
       $(@el).html(@template)
+    proceed: () =>
+      #Override backbone.sync to attach the token.
+      window.auth_token = @model.get('authentication_token')
+      $.ajaxSetup data: {authentication_token: @model.get('authentication_token')}
+      App.navigate('/main', trigger: yes)
+    ohNo: () ->
+      alert 'Failed to login. Check your email, password and internet connection.'
     authenticate: ->
-      @model.save {email: $('#email').val(), password: $('#password').val()}, {success: (-> App.navigate('/main', trigger: yes)) , error: (one, two, three) -> alert 'Failed to login. Check your email, password and internet connection.'}
+      #The way Success works is so dumb...
+      @model.save {email: $('#email').val(), password: $('#password').val()}, {success: ( => @proceed()) , error: (=> @ohNo())}
+
+  class window.Place extends Backbone.Model
+    idAttribute: "_id"
+    initialize: (options = {}) ->
+      @set('lat', compass.lat)
+      @set('long', compass.long)
+    validate: () ->
+      if compass.errors?
+        return compass.error
+      unless @get('lat')? or @get('long')?
+        #How would this error ever fire??
+        return "Unable to fix GPS location."
+      unless @get('name')?
+        return "A name is required."
+    url: server_url + '/places'
+
+    class window.CreatePlaces extends Backbone.View
+      initialize: () ->
+        'Coming soon!'
 
   class window.RadioCollarRouter extends Backbone.Router
     routes:
@@ -38,7 +65,7 @@ $ ->
       window.sessionView = new SessionView
     main: ->
       $('#content').empty()
-      alert 'Welcome. Now put something useful into the main() route.'
+      console.log 'Welcome. Now put something useful into the main() route.'
 
   window.App = new RadioCollarRouter()
   Backbone.history.start()
