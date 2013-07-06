@@ -11,7 +11,7 @@
   Backbone.Model.idAttribute = "_id";
 
   $(function() {
-    var _ref, _ref1, _ref2, _ref3, _ref4;
+    var _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6;
     window.Session = (function(_super) {
       __extends(Session, _super);
 
@@ -19,8 +19,6 @@
         _ref = Session.__super__.constructor.apply(this, arguments);
         return _ref;
       }
-
-      Session.prototype.initialize = function() {};
 
       Session.prototype.url = server_url + '/sessions';
 
@@ -98,7 +96,7 @@
         if (compass.error != null) {
           return alert(compass.error);
         }
-        if (!((this.get('lat') != null) || (this.get('long') != null))) {
+        if (!((this.has('lat') != null) || (this.has('long') != null))) {
           return alert("Unable to fix GPS location.");
         }
         if (this.get('name') == null) {
@@ -123,8 +121,7 @@
       CreatePlacesView.prototype.el = $('#content');
 
       CreatePlacesView.prototype.initialize = function() {
-        this.template = "<input id=\"new-place\" placeholder=\"Name you waypoint\">";
-        this.model = new Place();
+        this.template = "<div><a href=\"/#logout\">[Logout]</a></div>\n<input id=\"new-place\" placeholder=\"Name you waypoint\">";
         return this.render();
       };
 
@@ -136,7 +133,7 @@
 
       CreatePlacesView.prototype.createOnEnter = function(event) {
         if (event.keyCode === 13) {
-          this.setFields();
+          this.makePlace();
           return $('#new-place').val('');
         }
       };
@@ -145,33 +142,92 @@
         return $(this.el).html(this.template);
       };
 
-      CreatePlacesView.prototype.setFields = function() {
-        this.model.set('name', $('#new-place').val());
-        this.model.set('lat', compass.lat);
-        this.model.set('long', compass.long);
-        return this.model.save({
+      CreatePlacesView.prototype.makePlace = function() {
+        var model;
+        model = new Place();
+        model.set('name', $('#new-place').val());
+        model.set('lat', compass.lat);
+        model.set('long', compass.long);
+        model.save({
           authentication_token: localStorage.auth_token
         });
+        return window.placeList.collection.add(model);
       };
 
       return CreatePlacesView;
+
+    })(Backbone.View);
+    window.Places = (function(_super) {
+      __extends(Places, _super);
+
+      function Places() {
+        _ref4 = Places.__super__.constructor.apply(this, arguments);
+        return _ref4;
+      }
+
+      Places.prototype.url = server_url + '/places';
+
+      Places.prototype.model = Place;
+
+      return Places;
+
+    })(Backbone.Collection);
+    window.PlaceList = (function(_super) {
+      __extends(PlaceList, _super);
+
+      function PlaceList() {
+        this.render = __bind(this.render, this);
+        _ref5 = PlaceList.__super__.constructor.apply(this, arguments);
+        return _ref5;
+      }
+
+      PlaceList.prototype.el = $('#content');
+
+      PlaceList.prototype.initialize = function() {
+        var _this = this;
+        this.collection = new Places();
+        this.template = "<li><a href=\"{{location_url}}\">{{name}}</a></li>";
+        $(this.el).append("<ul id='places'></ul>");
+        this.collection.on('add remove reset sort change sync', (function() {
+          return _this.render();
+        }));
+        return this.collection.fetch({
+          data: {
+            authentication_token: localStorage.auth_token
+          },
+          success: (function() {
+            return _this.render();
+          })
+        });
+      };
+
+      PlaceList.prototype.render = function() {
+        var place, _i, _len, _ref6, _results;
+        $('#places').html('');
+        _ref6 = this.collection.models;
+        _results = [];
+        for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
+          place = _ref6[_i];
+          _results.push($('#places').append(templayed(this.template)(place.attributes)));
+        }
+        return _results;
+      };
+
+      return PlaceList;
 
     })(Backbone.View);
     window.RadioCollarRouter = (function(_super) {
       __extends(RadioCollarRouter, _super);
 
       function RadioCollarRouter() {
-        _ref4 = RadioCollarRouter.__super__.constructor.apply(this, arguments);
-        return _ref4;
+        _ref6 = RadioCollarRouter.__super__.constructor.apply(this, arguments);
+        return _ref6;
       }
 
       RadioCollarRouter.prototype.routes = {
         "": "home",
-        "main": "main"
-      };
-
-      RadioCollarRouter.prototype.initialize = function() {
-        return '';
+        "main": "main",
+        "logout": "logout"
       };
 
       RadioCollarRouter.prototype.home = function() {
@@ -191,7 +247,15 @@
           });
         }
         $('#content').empty();
-        return window.createPlaces = new CreatePlacesView;
+        window.createPlaces = new CreatePlacesView;
+        return window.placeList = new PlaceList;
+      };
+
+      RadioCollarRouter.prototype.logout = function() {
+        delete localStorage.auth_token;
+        return App.navigate('/', {
+          trigger: true
+        });
       };
 
       return RadioCollarRouter;
