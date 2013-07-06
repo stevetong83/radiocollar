@@ -1,7 +1,7 @@
 class Compass
   constructor: (options = {enableHighAccuracy: yes, maximumAge: 10000, timeout: 100000}) ->
     @lat    = 0
-    @long    = 0
+    @long   = 0
     @alt    = 0
     @acc    = 0
     @altAcc = 0
@@ -12,7 +12,7 @@ class Compass
     navigator.geolocation.watchPosition(@_parseGPS, @_parseErr, options)
   _parseGPS: (position) =>
     @lat    = position.coords.latitude
-    @long    = position.coords.longitude
+    @long   = position.coords.longitude
     @alt    = position.coords.altitude
     @acc    = position.coords.accuracy
     @altAcc = position.coords.altitudeAccuracy

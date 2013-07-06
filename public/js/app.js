@@ -8,8 +8,10 @@
 
   console.log('dont forget to change the @server_url to production.');
 
+  Backbone.Model.idAttribute = "_id";
+
   $(function() {
-    var _ref, _ref1, _ref2, _ref3;
+    var _ref, _ref1, _ref2, _ref3, _ref4;
     window.Session = (function(_super) {
       __extends(Session, _super);
 
@@ -18,13 +20,7 @@
         return _ref;
       }
 
-      Session.prototype.idAttribute = "_id";
-
-      Session.prototype.initialize = function(options) {
-        if (options == null) {
-          options = {};
-        }
-      };
+      Session.prototype.initialize = function() {};
 
       Session.prototype.url = server_url + '/sessions';
 
@@ -43,7 +39,7 @@
       SessionView.prototype.el = $('#content');
 
       SessionView.prototype.initialize = function() {
-        this.template = "<form id='sessionCreate'><div><input type=\"text\" id=\"email\" placeholder=\"User ID\" tabindex=\"2\" name=\"userID\" maxlength=\"255\"></div><div><input type=\"password\" placeholder=\"Password\" tabindex=\"3\" class=\"password hide\" id=\"password\" name=\"password\" maxlength=\"32\"></div><input type=\"hidden\" name=\"secretField\" value=\"probablyAnId\"><div><input type=\"checkbox\" id=\"login-remember\" tabindex=\"6\" name=\"rememberOption\">Remember User ID</div><div><a href=\"#\" id= 'go'>Login now.</a></div></form>";
+        this.template = "<form id='sessionCreate'>\n<div><input type=\"text\" id=\"email\" placeholder=\"User ID\" tabindex=\"2\" name=\"userID\" maxlength=\"255\"></div>\n<div><input type=\"password\" placeholder=\"Password\" tabindex=\"3\" class=\"password hide\" id=\"password\" name=\"password\" maxlength=\"32\"></div>\n<div><a href=\"#\" id= 'go'>Login now.</a></div></form>";
         this.model = new Session();
         return this.render();
       };
@@ -57,12 +53,7 @@
       };
 
       SessionView.prototype.proceed = function() {
-        window.auth_token = this.model.get('authentication_token');
-        $.ajaxSetup({
-          data: {
-            authentication_token: this.model.get('authentication_token')
-          }
-        });
+        localStorage.auth_token = this.model.get('authentication_token');
         return App.navigate('/main', {
           trigger: true
         });
@@ -91,8 +82,6 @@
 
     })(Backbone.View);
     window.Place = (function(_super) {
-      var _ref3;
-
       __extends(Place, _super);
 
       function Place() {
@@ -100,55 +89,80 @@
         return _ref2;
       }
 
-      Place.prototype.idAttribute = "_id";
-
-      Place.prototype.initialize = function(options) {
-        if (options == null) {
-          options = {};
-        }
+      Place.prototype.initialize = function() {
         this.set('lat', compass.lat);
         return this.set('long', compass.long);
       };
 
       Place.prototype.validate = function() {
-        if (compass.errors != null) {
-          return compass.error;
+        if (compass.error != null) {
+          return alert(compass.error);
         }
         if (!((this.get('lat') != null) || (this.get('long') != null))) {
-          return "Unable to fix GPS location.";
+          return alert("Unable to fix GPS location.");
         }
         if (this.get('name') == null) {
-          return "A name is required.";
+          return alert("A name is required.");
         }
       };
 
       Place.prototype.url = server_url + '/places';
 
-      window.CreatePlaces = (function(_super1) {
-        __extends(CreatePlaces, _super1);
-
-        function CreatePlaces() {
-          _ref3 = CreatePlaces.__super__.constructor.apply(this, arguments);
-          return _ref3;
-        }
-
-        CreatePlaces.prototype.initialize = function() {
-          return 'Coming soon!';
-        };
-
-        return CreatePlaces;
-
-      })(Backbone.View);
-
       return Place;
 
     })(Backbone.Model);
+    window.CreatePlacesView = (function(_super) {
+      __extends(CreatePlacesView, _super);
+
+      function CreatePlacesView() {
+        this.createOnEnter = __bind(this.createOnEnter, this);
+        _ref3 = CreatePlacesView.__super__.constructor.apply(this, arguments);
+        return _ref3;
+      }
+
+      CreatePlacesView.prototype.el = $('#content');
+
+      CreatePlacesView.prototype.initialize = function() {
+        this.template = "<input id=\"new-place\" placeholder=\"Name you waypoint\">";
+        this.model = new Place();
+        return this.render();
+      };
+
+      CreatePlacesView.prototype.events = function() {
+        return {
+          "keypress #new-place": "createOnEnter"
+        };
+      };
+
+      CreatePlacesView.prototype.createOnEnter = function(event) {
+        if (event.keyCode === 13) {
+          this.setFields();
+          return $('#new-place').val('');
+        }
+      };
+
+      CreatePlacesView.prototype.render = function() {
+        return $(this.el).html(this.template);
+      };
+
+      CreatePlacesView.prototype.setFields = function() {
+        this.model.set('name', $('#new-place').val());
+        this.model.set('lat', compass.lat);
+        this.model.set('long', compass.long);
+        return this.model.save({
+          authentication_token: localStorage.auth_token
+        });
+      };
+
+      return CreatePlacesView;
+
+    })(Backbone.View);
     window.RadioCollarRouter = (function(_super) {
       __extends(RadioCollarRouter, _super);
 
       function RadioCollarRouter() {
-        _ref3 = RadioCollarRouter.__super__.constructor.apply(this, arguments);
-        return _ref3;
+        _ref4 = RadioCollarRouter.__super__.constructor.apply(this, arguments);
+        return _ref4;
       }
 
       RadioCollarRouter.prototype.routes = {
@@ -156,15 +170,28 @@
         "main": "main"
       };
 
-      RadioCollarRouter.prototype.initialize = function() {};
+      RadioCollarRouter.prototype.initialize = function() {
+        return '';
+      };
 
       RadioCollarRouter.prototype.home = function() {
-        return window.sessionView = new SessionView;
+        if (localStorage.auth_token != null) {
+          return App.navigate('/main', {
+            trigger: true
+          });
+        } else {
+          return window.sessionView = new SessionView;
+        }
       };
 
       RadioCollarRouter.prototype.main = function() {
+        if (localStorage.auth_token == null) {
+          return App.navigate('/', {
+            trigger: true
+          });
+        }
         $('#content').empty();
-        return console.log('Welcome. Now put something useful into the main() route.');
+        return window.createPlaces = new CreatePlacesView;
       };
 
       return RadioCollarRouter;
