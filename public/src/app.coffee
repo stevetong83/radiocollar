@@ -1,10 +1,3 @@
-#REFACTOR:
-# - Stop calling localStorage.auth_token. Use the model itself. Or store the model in local storage. Or everything in localstorage
-# - Asign relevant DOM attributes to view attributes. Stop calling DOM directly so much.
-# - Get rid of all the global vars when you're done hacking. If I must has globals, put them into the App namespace
-# - A lot of views are using @el but they should actually be using @$el()
-# - Add a refresh button
-# - There should be a better way of adding a place to the apps PlaceCollection than using global objects
 @server_url  = '/api/v1'
 console.log 'dont forget to change the @server_url to production.'
 Backbone.Model.idAttribute = "_id"
@@ -50,6 +43,10 @@ $ ->
         return (alert "A name is required.")
     #May need to change this one to "/places/#{@_id}" when I try to edit stuff.
     url: server_url + '/places'
+  class window.Places extends Backbone.Collection
+    url: server_url + '/places'
+    model: Place
+
   class window.CreatePlacesView extends Backbone.View
     el: $('#content')
     initialize: ->
@@ -69,14 +66,12 @@ $ ->
       $(@el).html(@template)
     makePlace: () ->
       model = new Place()
-      model.set('name', $('#new-place').val())
-      model.set('lat',  compass.lat)
-      model.set('long', compass.long)
+      model.set
+        name : $('#new-place').val()
+        lat  : compass.lat
+        long : compass.long
       model.save({authentication_token: localStorage.auth_token})
       window.placeList.collection.add(model)
-  class window.Places extends Backbone.Collection
-    url: server_url + '/places'
-    model: Place
   class window.PlaceList extends Backbone.View
     el: $('#content')
     initialize: ->
@@ -113,3 +108,11 @@ $ ->
       return App.navigate('/', trigger: yes)
   window.App = new RadioCollarRouter()
   Backbone.history.start()
+
+##REFACTOR:
+# - Stop calling localStorage.auth_token. Use the model itself. Or store the model in local storage. Or everything in localstorage
+# - Asign relevant DOM attributes to view attributes. Stop calling DOM directly so much.
+# - Get rid of all the global vars when you're done hacking. If I must has globals, put them into the App namespace
+# - A lot of views are using @el but they should actually be using @$el()
+# - Add a refresh button
+# - There should be a better way of adding a place to the apps PlaceCollection than using global objects

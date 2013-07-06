@@ -109,13 +109,28 @@
       return Place;
 
     })(Backbone.Model);
+    window.Places = (function(_super) {
+      __extends(Places, _super);
+
+      function Places() {
+        _ref3 = Places.__super__.constructor.apply(this, arguments);
+        return _ref3;
+      }
+
+      Places.prototype.url = server_url + '/places';
+
+      Places.prototype.model = Place;
+
+      return Places;
+
+    })(Backbone.Collection);
     window.CreatePlacesView = (function(_super) {
       __extends(CreatePlacesView, _super);
 
       function CreatePlacesView() {
         this.createOnEnter = __bind(this.createOnEnter, this);
-        _ref3 = CreatePlacesView.__super__.constructor.apply(this, arguments);
-        return _ref3;
+        _ref4 = CreatePlacesView.__super__.constructor.apply(this, arguments);
+        return _ref4;
       }
 
       CreatePlacesView.prototype.el = $('#content');
@@ -145,9 +160,11 @@
       CreatePlacesView.prototype.makePlace = function() {
         var model;
         model = new Place();
-        model.set('name', $('#new-place').val());
-        model.set('lat', compass.lat);
-        model.set('long', compass.long);
+        model.set({
+          name: $('#new-place').val(),
+          lat: compass.lat,
+          long: compass.long
+        });
         model.save({
           authentication_token: localStorage.auth_token
         });
@@ -157,21 +174,6 @@
       return CreatePlacesView;
 
     })(Backbone.View);
-    window.Places = (function(_super) {
-      __extends(Places, _super);
-
-      function Places() {
-        _ref4 = Places.__super__.constructor.apply(this, arguments);
-        return _ref4;
-      }
-
-      Places.prototype.url = server_url + '/places';
-
-      Places.prototype.model = Place;
-
-      return Places;
-
-    })(Backbone.Collection);
     window.PlaceList = (function(_super) {
       __extends(PlaceList, _super);
 
