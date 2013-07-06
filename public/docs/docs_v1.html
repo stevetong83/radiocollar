@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>RadioCollar</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+    <ul class="sections">
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h1">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <h1>RadioCollar</h1>
+<p>Set the server path. We need to change this when we deploy...</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="property">@server_url</span>  = <span class="string">'/api/v1'</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <p>... so I set a reminder to avoid any headaches</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>console.log <span class="string">'dont forget to change the @server_url to production.'</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p>Set the ID attribute to the mongodb  style _id for all models</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>Backbone.Model.idAttribute = <span class="string">"_id"</span>
+$ -&gt;
+  <span class="class"><span class="keyword">class</span> <span class="title">window</span>.<span class="title">Session</span> <span class="keyword">extends</span> <span class="title">Backbone</span>.<span class="title">Model</span></span>
+    url: server_url + <span class="string">'/sessions'</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>session view is the login screen.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  <span class="class"><span class="keyword">class</span> <span class="title">window</span>.<span class="title">SessionView</span> <span class="keyword">extends</span> <span class="title">Backbone</span>.<span class="title">View</span></span>
+    el: $(<span class="string">'#content'</span>)
+    initialize: -&gt;
+      <span class="property">@template</span> = <span class="string">"""
+      &lt;form id='sessionCreate'&gt;
+      &lt;div&gt;&lt;input type="text" id="email" placeholder="User ID" tabindex="2" name="userID" maxlength="255"&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;input type="password" placeholder="Password" tabindex="3" class="password hide" id="password" name="password" maxlength="32"&gt;&lt;/div&gt;
+      &lt;div&gt;&lt;a href="#" id= 'go'&gt;Login now.&lt;/a&gt;&lt;/div&gt;&lt;/form&gt;
+      """</span>
+      <span class="property">@model</span> = <span class="keyword">new</span> Session()
+      <span class="property">@render</span>()
+    events:
+      <span class="string">"click #go"</span> : <span class="string">"authenticate"</span>
+    render: -&gt;
+      $(<span class="property">@el</span>).html(<span class="property">@template</span>)
+    proceed: () =&gt;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>proceed() sets the auth_token globally and sends the browser to the main content
+Right now, I stored the token as a string in localStorage. Probably should just put the whole model in localstorage.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      localStorage.auth_token = <span class="property">@model</span>.get(<span class="string">'authentication_token'</span>)
+      App.navigate(<span class="string">'/main'</span>, trigger: <span class="literal">yes</span>)
+    ohNo: () -&gt;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <p>le error handler</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      alert <span class="string">'Failed to login. Check your email, password and internet connection.'</span>
+    authenticate: -&gt;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>Isn&#39;t it gross the way you have to make callbacks in coffeescript in order to preserve context?</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      <span class="property">@model</span>.save {email: $(<span class="string">'#email'</span>).val(), password: $(<span class="string">'#password'</span>).val()}, {success: ( =&gt; <span class="property">@proceed</span>()) , error: ( =&gt; <span class="property">@ohNo</span>())}
+
+  <span class="class"><span class="keyword">class</span> <span class="title">window</span>.<span class="title">Place</span> <span class="keyword">extends</span> <span class="title">Backbone</span>.<span class="title">Model</span></span>
+    initialize: () -&gt;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <p>Compass is our HTML5 Geodata API that we made a long time ago.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      <span class="property">@set</span>(<span class="string">'lat'</span>, compass.lat)
+      <span class="property">@set</span>(<span class="string">'long'</span>, compass.long)
+    validate: () -&gt;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>When things go right, validate() returns null.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      <span class="keyword">if</span> compass.error?
+        <span class="keyword">return</span> (alert compass.error)
+      <span class="keyword">unless</span> <span class="property">@has</span>(<span class="string">'lat'</span>)? <span class="keyword">or</span> <span class="property">@has</span>(<span class="string">'long'</span>)?</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <p>How would this error ever fire? Need to see if its redundant.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>        <span class="keyword">return</span> (alert <span class="string">"Unable to fix GPS location."</span>)
+      <span class="keyword">unless</span> <span class="property">@get</span>(<span class="string">'name'</span>)?
+        <span class="keyword">return</span> (alert <span class="string">"A name is required."</span>)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p>May need to change this one to @server_url + &quot;/places/#{@_id}&quot; when we add edit functionality.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    url: server_url + <span class="string">'/places'</span>
+  <span class="class"><span class="keyword">class</span> <span class="title">window</span>.<span class="title">Places</span> <span class="keyword">extends</span> <span class="title">Backbone</span>.<span class="title">Collection</span></span>
+    url: server_url + <span class="string">'/places'</span>
+    model: Place
+  <span class="class"><span class="keyword">class</span> <span class="title">window</span>.<span class="title">PlacesView</span> <span class="keyword">extends</span> <span class="title">Backbone</span>.<span class="title">View</span></span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>The places view is a widget for creating Places, placed ontop of a \<ul> tag that lists the collection</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    el: $(<span class="string">'#content'</span>)
+    initialize: -&gt;
+      <span class="property">@collection</span> = <span class="keyword">new</span> Places()
+      <span class="property">@template</span> = <span class="string">"""&lt;li&gt;&lt;a href="{{location_url}}"&gt;{{name}}&lt;/a&gt;&lt;/li&gt;"""</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p>We only need to add the creation widget once.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      $(<span class="property">@el</span>).html <span class="string">"""
+        &lt;div&gt;&lt;a href="/#logout"&gt;[Logout]&lt;/a&gt;&lt;/div&gt;
+        &lt;input id="new-place" placeholder="Name you waypoint"&gt;
+        &lt;ul id='places'&gt;&lt;/ul&gt;
+        """</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <p>If any of these events happen, it repaints the list of items</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      <span class="property">@collection</span>.<span class="literal">on</span>(<span class="string">'add remove reset sort change sync'</span>, (=&gt; <span class="property">@render</span>()))
+      <span class="property">@collection</span>.fetch
+        data: {authentication_token: localStorage.auth_token}
+        success: ( =&gt; <span class="property">@render</span>())</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-15">&#182;</a>
+              </div>
+              <p>Press enter to make a new Place</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    events: -&gt;
+      <span class="string">"keypress #new-place"</span> : <span class="string">"createOnEnter"</span>
+    render: =&gt;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-16">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-16">&#182;</a>
+              </div>
+              <p>Erase the old list</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      $(<span class="string">'#places'</span>).html(<span class="string">''</span>)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-17">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-17">&#182;</a>
+              </div>
+              <p>iterate over the collection and re-append to current list</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      <span class="keyword">for</span> place <span class="keyword">in</span> <span class="property">@collection</span>.models
+        $(<span class="string">'#places'</span>).append(templayed(<span class="property">@template</span>)(place.attributes))
+    makePlace: () -&gt;
+      model = <span class="keyword">new</span> Place()
+      model.set
+        name : $(<span class="string">'#new-place'</span>).val()
+        lat  : compass.lat
+        long : compass.long
+      model.save({authentication_token: localStorage.auth_token})
+      <span class="property">@collection</span>.add(model)
+    createOnEnter: (event) =&gt;
+      <span class="keyword">if</span> event.keyCode <span class="keyword">is</span> <span class="number">13</span>
+        <span class="property">@makePlace</span>()</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-18">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-18">&#182;</a>
+              </div>
+              <p>Clears text box after success. Maybe I should put this in makePlace() and only clear on success.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>        $(<span class="string">'#new-place'</span>).val(<span class="string">''</span>)
+  <span class="class"><span class="keyword">class</span> <span class="title">window</span>.<span class="title">RadioCollarRouter</span> <span class="keyword">extends</span> <span class="title">Backbone</span>.<span class="title">Router</span></span>
+    routes:
+      <span class="string">""</span>      : <span class="string">"home"</span>
+      <span class="string">"main"</span>  : <span class="string">"main"</span>
+      <span class="string">"logout"</span>: <span class="string">"logout"</span>
+    home: -&gt;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-19">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-19">&#182;</a>
+              </div>
+              <p>Redirect to main if theyre already logged in</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      <span class="keyword">if</span> localStorage.auth_token?
+        <span class="keyword">return</span> App.navigate(<span class="string">'/main'</span>, trigger: <span class="literal">yes</span>)
+      <span class="keyword">else</span>
+        window.sessionView = <span class="keyword">new</span> SessionView
+    main: -&gt;
+      <span class="keyword">unless</span> localStorage.auth_token?
+        <span class="keyword">return</span> App.navigate(<span class="string">'/'</span>, trigger: <span class="literal">yes</span>)
+      $(<span class="string">'#content'</span>).empty()
+      window.placesView = <span class="keyword">new</span> PlacesView
+    logout: -&gt;
+      <span class="keyword">delete</span> localStorage.auth_token
+      <span class="keyword">return</span> App.navigate(<span class="string">'/'</span>, trigger: <span class="literal">yes</span>)
+  window.App = <span class="keyword">new</span> RadioCollarRouter()
+  Backbone.history.start()</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-20">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h1">
+                <a class="pilcrow" href="#section-20">&#182;</a>
+              </div>
+              <h1>STUFF TO REFACTOR:</h1>
+<ul>
+<li>Stop calling localStorage.auth_token. Use the model itself. Or store the model in local storage. Or everything in localstorage</li>
+<li>Asign relevant DOM attributes to view attributes. Stop calling DOM directly so much.</li>
+<li>Get rid of all the global vars when you&#39;re done hacking. If I must has globals, put them into the App namespace</li>
+<li>A lot of views are using @el but they should actually be using @$el()</li>
+<li>Add a refresh button</li>
+</ul>
+
+            </div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

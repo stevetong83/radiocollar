@@ -247,5 +247,5 @@
 }).call(this);
 
 /*
-//@ sourceMappingURL=app.map
+//@ sourceMappingURL=docs_v1.map
 */
