@@ -20,7 +20,7 @@ class Api::V1::PlacesController < Api::V1::ApiController
   # [422] Invalid params
 
   def create
-    url = Place.set_map_url(params[:name], params[:lat], params[:lat])
+    url = Place.set_map_url(params[:name], params[:lat], params[:long])
     @place = @user.places.build(name: params[:name], lat: params[:lat], long: params[:long], location_url: url)
     if @place.save
       render json: @place.to_json, success: true, status: 200
