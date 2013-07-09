@@ -10779,3 +10779,84 @@ Processing by Api::V1::PlacesController#index as JSON
   MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"6DfasiksLMsWpVuVKofH"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (4.2932ms)
   MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"51d38d770e8850b7a4000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3400ms)
 Completed 200 OK in 7ms (Views: 0.1ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2290ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.1489ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={:email=>"stevetong83@hotmail.com"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.6330ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"UbY4MJ8Y1z6dLyMpFfcE"}, "$orderby"=>{:_id=>1}} flags=[] limit=-1 skip=0 batch_size=nil fields=nil (4.3840ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=radio_collar_development collection=users documents=[{"_id"=>"51d8cd68df86c0f313000001", "email"=>"stevetong83@hotmail.com", "encrypted_password"=>"$2a$10$TIfn7EMeLnTfs1OSs.nmpOGG0NRkn0PRMK1KBLk0LzKqs8Dq6ueuC", "sign_in_count"=>0, "authentication_token"=>"UbY4MJ8Y1z6dLyMpFfcE", "updated_at"=>2013-07-07 02:07:36 UTC, "created_at"=>2013-07-07 02:07:36 UTC}] flags=[] (0.1578ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=radio_collar_development command={:count=>"users", :query=>{}} (1.2121ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2013-07-06 19:08:07 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"email"=>"stevetong83@hotmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"stevetong83@hotmail.com", "password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7792ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"email"=>"stevetong83@hotmail.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4160ms)
+Completed 200 OK in 145ms (Views: 0.3ms)
+
+
+Started GET "/api/v1/places?authentication_token=UbY4MJ8Y1z6dLyMpFfcE" for 127.0.0.1 at 2013-07-06 19:08:07 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"UbY4MJ8Y1z6dLyMpFfcE"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"UbY4MJ8Y1z6dLyMpFfcE"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5760ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"51d8cd68df86c0f313000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9541ms)
+Completed 200 OK in 5ms (Views: 0.2ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=radio_collar_development command={:count=>"places", :query=>{}} (0.8290ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.6687ms)
+
+
+Started POST "/api/v1/places" for 127.0.0.1 at 2013-07-06 19:08:31 -0700
+Processing by Api::V1::PlacesController#create as JSON
+  Parameters: {"lat"=>33.6109406, "long"=>-111.9928036, "name"=>"Test Location", "authentication_token"=>"UbY4MJ8Y1z6dLyMpFfcE", "place"=>{"name"=>"Test Location", "lat"=>33.6109406, "long"=>-111.9928036}}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"UbY4MJ8Y1z6dLyMpFfcE"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7927ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={"$query"=>{"url"=>"http://maps.google.com/maps?q=33.6109406,+33.6109406+(Test Location)"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.5750ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=radio_collar_development command={:count=>"mongoid_shortener_shortened_urls", :query=>{}} (0.2561ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={"$query"=>{"unique_key"=>"6"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3390ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={:url=>"http://maps.google.com/maps?q=33.6109406,+33.6109406+(Test Location)"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.2739ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={:unique_key=>"6"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.2830ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=radio_collar_development collection=mongoid_shortener_shortened_urls documents=[{"_id"=>"51d8cd9fdf86c0c762000001", "use_count"=>0, "url"=>"http://maps.google.com/maps?q=33.6109406,+33.6109406+(Test Location)", "unique_key"=>"6", "updated_at"=>2013-07-07 02:08:31 UTC, "created_at"=>2013-07-07 02:08:31 UTC}] flags=[] (0.1431ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=radio_collar_development collection=places documents=[{"_id"=>"51d8cd9fdf86c0c762000002", "name"=>"Test Location", "lat"=>33.6109406, "long"=>-111.9928036, "location_url"=>"http://localhost:3000/map~6", "user_id"=>"51d8cd68df86c0f313000001", "updated_at"=>2013-07-07 02:08:31 UTC, "created_at"=>2013-07-07 02:08:31 UTC}] flags=[] (0.1040ms)
+Completed 200 OK in 26ms (Views: 0.1ms)
+
+
+Started GET "/map~6" for 127.0.0.1 at 2013-07-06 19:08:33 -0700
+
+ActionController::RoutingError (No route matches [GET] "/map~6"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/stong-mac/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.5ms)
