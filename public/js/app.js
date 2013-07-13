@@ -11,7 +11,7 @@
   Backbone.Model.idAttribute = "_id";
 
   $(function() {
-    var _ref, _ref1, _ref2, _ref3, _ref4, _ref5;
+    var _ref, _ref1, _ref2, _ref3, _ref4, _ref5, _ref6;
     window.Session = (function(_super) {
       __extends(Session, _super);
 
@@ -124,14 +124,51 @@
       return Places;
 
     })(Backbone.Collection);
+    window.PlaceView = (function(_super) {
+      __extends(PlaceView, _super);
+
+      function PlaceView() {
+        this.render = __bind(this.render, this);
+        _ref4 = PlaceView.__super__.constructor.apply(this, arguments);
+        return _ref4;
+      }
+
+      PlaceView.prototype.el = 'ul#places';
+
+      PlaceView.prototype.tagName = 'li';
+
+      PlaceView.prototype.initialize = function(place) {
+        this.model = place;
+        return $(this.el).append(this.render);
+      };
+
+      PlaceView.prototype.template = "<li><a href=\"{{location_url}}\">{{name}}</a><span class=\"destroy\">[X]</span></li>";
+
+      PlaceView.prototype.events = function() {
+        return {
+          "click .destroy": "removePlace"
+        };
+      };
+
+      PlaceView.prototype.removePlace = function() {
+        return this.model.destroy();
+      };
+
+      PlaceView.prototype.render = function() {
+        return templayed(this.template)(this.model.attributes);
+      };
+
+      return PlaceView;
+
+    })(Backbone.View);
     window.PlacesView = (function(_super) {
       __extends(PlacesView, _super);
 
       function PlacesView() {
         this.createOnEnter = __bind(this.createOnEnter, this);
         this.render = __bind(this.render, this);
-        _ref4 = PlacesView.__super__.constructor.apply(this, arguments);
-        return _ref4;
+        _ref5 = PlacesView.__super__.constructor.apply(this, arguments);
+        return _ref5;
       }
 
       PlacesView.prototype.el = $('#content');
@@ -139,7 +176,6 @@
       PlacesView.prototype.initialize = function() {
         var _this = this;
         this.collection = new Places();
-        this.template = "<li><a href=\"{{location_url}}\">{{name}}</a></li>";
         $(this.el).html("<div><a href=\"/#logout\">[Logout]</a></div>\n<input id=\"new-place\" placeholder=\"Name you waypoint\">\n<ul id='places'></ul>");
         this.collection.on('add remove reset sort change sync', (function() {
           return _this.render();
@@ -161,13 +197,13 @@
       };
 
       PlacesView.prototype.render = function() {
-        var place, _i, _len, _ref5, _results;
+        var place, _i, _len, _ref6, _results;
         $('#places').html('');
-        _ref5 = this.collection.models;
+        _ref6 = this.collection.models;
         _results = [];
-        for (_i = 0, _len = _ref5.length; _i < _len; _i++) {
-          place = _ref5[_i];
-          _results.push($('#places').append(templayed(this.template)(place.attributes)));
+        for (_i = 0, _len = _ref6.length; _i < _len; _i++) {
+          place = _ref6[_i];
+          _results.push(new PlaceView(place));
         }
         return _results;
       };
@@ -200,8 +236,8 @@
       __extends(RadioCollarRouter, _super);
 
       function RadioCollarRouter() {
-        _ref5 = RadioCollarRouter.__super__.constructor.apply(this, arguments);
-        return _ref5;
+        _ref6 = RadioCollarRouter.__super__.constructor.apply(this, arguments);
+        return _ref6;
       }
 
       RadioCollarRouter.prototype.routes = {

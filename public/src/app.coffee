@@ -1,6 +1,7 @@
 @server_url  = '/api/v1'
 console.log 'dont forget to change the @server_url to production.'
 Backbone.Model.idAttribute = "_id"
+
 $ ->
   class window.Session extends Backbone.Model
     url: server_url + '/sessions'
@@ -46,11 +47,25 @@ $ ->
   class window.Places extends Backbone.Collection
     url: server_url + '/places'
     model: Place
+
+  class window.PlaceView extends Backbone.View
+    el:      'ul#places'
+    tagName: 'li'
+    initialize: (place) ->
+      @model = place
+      $(@el).append(@render)
+    template: """<li><a href="{{location_url}}">{{name}}</a><span class="destroy">[X]</span></li>"""
+    events: ->
+      "click .destroy" : "removePlace"
+    removePlace: ->
+      @model.destroy()
+    render: =>
+      templayed(@template)(@model.attributes)
+
   class window.PlacesView extends Backbone.View
-    el: $('#content')
+    el:      $('#content')
     initialize: ->
       @collection = new Places()
-      @template = """<li><a href="{{location_url}}">{{name}}</a></li>"""
       $(@el).html """
         <div><a href="/#logout">[Logout]</a></div>
         <input id="new-place" placeholder="Name you waypoint">
@@ -65,7 +80,7 @@ $ ->
     render: =>
       $('#places').html('')
       for place in @collection.models
-        $('#places').append(templayed(@template)(place.attributes))
+        new PlaceView(place)
     makePlace: () ->
       model = new Place()
       model.set
@@ -79,6 +94,7 @@ $ ->
         @makePlace()
         #probably a better way of doing this...
         $('#new-place').val('')
+
   class window.RadioCollarRouter extends Backbone.Router
     routes:
       ""      : "home"
