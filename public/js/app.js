@@ -37,7 +37,7 @@
       SessionView.prototype.el = $('#content');
 
       SessionView.prototype.initialize = function() {
-        this.template = "<form id='sessionCreate'>\n<div><input type=\"text\" id=\"email\" placeholder=\"User ID\" tabindex=\"2\" name=\"userID\" maxlength=\"255\"></div>\n<div><input type=\"password\" placeholder=\"Password\" tabindex=\"3\" class=\"password hide\" id=\"password\" name=\"password\" maxlength=\"32\"></div>\n<div><a href=\"#\" id= 'go'>Login now.</a></div></form>";
+        this.template = "<form id='sessionCreate'>\n<div><input type=\"text\" id=\"email\" placeholder=\"User ID\" tabindex=\"2\" name=\"userID\" maxlength=\"255\"></div>\n<div><input type=\"password\" placeholder=\"Password\" tabindex=\"3\" class=\"password hide\" id=\"password\" name=\"password\" maxlength=\"32\"></div>\n<div><a href=\"#\" id=\"go\" class=\"btn-wide\">Login now.</a></div></form>";
         this.model = new Session();
         return this.render();
       };

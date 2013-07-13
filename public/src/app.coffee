@@ -12,7 +12,7 @@ $ ->
       <form id='sessionCreate'>
       <div><input type="text" id="email" placeholder="User ID" tabindex="2" name="userID" maxlength="255"></div>
       <div><input type="password" placeholder="Password" tabindex="3" class="password hide" id="password" name="password" maxlength="32"></div>
-      <div><a href="#" id= 'go'>Login now.</a></div></form>
+      <div><a href="#" id="go" class="btn-wide">Login now.</a></div></form>
       """
       @model = new Session()
       @render()
