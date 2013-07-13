@@ -1,0 +1,34 @@
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (27.4129ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (141.4230ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0853ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0002ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9670ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>-1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.0200ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=radio_collar_development collection=users selector={"_id"=>"51d8cd68df86c0f313000001"} update={"$set"=>{"encrypted_password"=>"$2a$10$O9pm/PsLksOd6R0pRfRO2u9tWmgUEdXVOQUzHRXI7GRzgRRcEsg4e", "updated_at"=>2013-07-13 19:25:22 UTC}} flags=[] (0.1671ms)
+
+
+Started GET "/api/v1/places?authentication_token=UbY4MJ8Y1z6dLyMpFfcE" for 127.0.0.1 at 2013-07-13 12:29:30 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"UbY4MJ8Y1z6dLyMpFfcE"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7560ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"UbY4MJ8Y1z6dLyMpFfcE"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3719ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"51d8cd68df86c0f313000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.1702ms)
+Completed 200 OK in 80ms (Views: 0.2ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2013-07-13 12:29:45 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"email"=>"stevetong83@hotmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"stevetong83@hotmail.com", "password"=>"[FILTERED]"}}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"email"=>"stevetong83@hotmail.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5801ms)
+Completed 200 OK in 3879ms (Views: 0.3ms)
+
+
+Started GET "/api/v1/places?authentication_token=UbY4MJ8Y1z6dLyMpFfcE" for 127.0.0.1 at 2013-07-13 12:29:49 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"UbY4MJ8Y1z6dLyMpFfcE"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"UbY4MJ8Y1z6dLyMpFfcE"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6099ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"51d8cd68df86c0f313000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3877ms)
+Completed 200 OK in 3ms (Views: 0.1ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8140ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.2350ms)

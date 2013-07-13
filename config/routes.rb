@@ -2,11 +2,11 @@ RadioCollarBackend::Application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :sessions
       devise_scope :user do
-        #Can we do resources :registrations instead to make it easier on backbone?
         post "register", to: "registrations#create"
         post "reset_password", to: "registrations#reset_password"
+        post 'sessions', to: 'sessions#create'
+        delete 'sessions', to: 'sessions#destroy'
       end
       resources :places
     end

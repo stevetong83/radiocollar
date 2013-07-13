@@ -3,12 +3,12 @@ require 'spec_helper'
 describe "Mobile Sessions" do
   #TODO: Put in spec_helper
   def post_login params = {empty: :empty}
-    post create_api_v1_session_path, Hash[params].to_json,{"CONTENT_TYPE" => "application/json"}
+    post "/api/v1/sessions", Hash[params].to_json,{"CONTENT_TYPE" => "application/json"}
   end
 
   def post_logout params = {empty: :empty}
     #Bah! When I switched over to the RESTful naming it started failing. Bringing this one back to its pre-restful state
-    delete "/api/v1/logout", Hash[params].to_json,{"CONTENT_TYPE" => "application/json"}
+    delete "/api/v1/sessions", Hash[params].to_json,{"CONTENT_TYPE" => "application/json"}
   end
 
   let(:user) {FactoryGirl.create :user}

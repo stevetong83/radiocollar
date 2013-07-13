@@ -2570,3 +2570,395 @@
 [07/08/13 18:25:58 -0700 Stephens-MacBook-Pro.local (2115)] INFO : Installing Rails3 Error instrumentation
 [07/08/13 18:25:58 -0700 Stephens-MacBook-Pro.local (2115)] INFO : Finished instrumentation
 [07/08/13 18:25:58 -0700 Stephens-MacBook-Pro.local (2115)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 11:46:08 -0700 Stephens-MacBook-Pro.local (1418)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 11:46:08 -0700 Stephens-MacBook-Pro.local (1418)] INFO : Starting the New Relic Agent.
+[07/13/13 11:46:08 -0700 Stephens-MacBook-Pro.local (1418)] INFO : Environment: development
+[07/13/13 11:46:08 -0700 Stephens-MacBook-Pro.local (1418)] INFO : Dispatcher: thin
+[07/13/13 11:46:08 -0700 Stephens-MacBook-Pro.local (1418)] INFO : Application: development
+[07/13/13 11:46:08 -0700 Stephens-MacBook-Pro.local (1418)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'development'
+[07/13/13 11:46:08 -0700 Stephens-MacBook-Pro.local (1418)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 11:46:08 -0700 Stephens-MacBook-Pro.local (1418)] INFO : Installing DelayedJob instrumentation
+[07/13/13 11:46:08 -0700 Stephens-MacBook-Pro.local (1418)] INFO : Installing Net instrumentation
+[07/13/13 11:46:08 -0700 Stephens-MacBook-Pro.local (1418)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 11:46:08 -0700 Stephens-MacBook-Pro.local (1418)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 11:46:08 -0700 Stephens-MacBook-Pro.local (1418)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 11:46:08 -0700 Stephens-MacBook-Pro.local (1418)] INFO : Finished instrumentation
+[07/13/13 11:46:08 -0700 Stephens-MacBook-Pro.local (1418)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 11:46:45 -0700 Stephens-MacBook-Pro.local (1535)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 11:46:45 -0700 Stephens-MacBook-Pro.local (1535)] INFO : Starting the New Relic Agent.
+[07/13/13 11:46:45 -0700 Stephens-MacBook-Pro.local (1535)] INFO : Environment: development
+[07/13/13 11:46:45 -0700 Stephens-MacBook-Pro.local (1535)] INFO : Dispatcher: thin
+[07/13/13 11:46:45 -0700 Stephens-MacBook-Pro.local (1535)] INFO : Application: development
+[07/13/13 11:46:45 -0700 Stephens-MacBook-Pro.local (1535)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'development'
+[07/13/13 11:46:46 -0700 Stephens-MacBook-Pro.local (1535)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 11:46:46 -0700 Stephens-MacBook-Pro.local (1535)] INFO : Installing DelayedJob instrumentation
+[07/13/13 11:46:46 -0700 Stephens-MacBook-Pro.local (1535)] INFO : Installing Net instrumentation
+[07/13/13 11:46:46 -0700 Stephens-MacBook-Pro.local (1535)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 11:46:46 -0700 Stephens-MacBook-Pro.local (1535)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 11:46:46 -0700 Stephens-MacBook-Pro.local (1535)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 11:46:46 -0700 Stephens-MacBook-Pro.local (1535)] INFO : Finished instrumentation
+[07/13/13 11:46:46 -0700 Stephens-MacBook-Pro.local (1535)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 11:57:42 -0700 Stephens-MacBook-Pro.local (1925)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 11:57:42 -0700 Stephens-MacBook-Pro.local (1925)] INFO : Starting the New Relic Agent.
+[07/13/13 11:57:42 -0700 Stephens-MacBook-Pro.local (1925)] INFO : Environment: test
+[07/13/13 11:57:42 -0700 Stephens-MacBook-Pro.local (1925)] INFO : Dispatcher: thin
+[07/13/13 11:57:42 -0700 Stephens-MacBook-Pro.local (1925)] INFO : Application: test
+[07/13/13 11:57:42 -0700 Stephens-MacBook-Pro.local (1925)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 11:57:42 -0700 Stephens-MacBook-Pro.local (1925)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 11:57:42 -0700 Stephens-MacBook-Pro.local (1925)] INFO : Installing DelayedJob instrumentation
+[07/13/13 11:57:42 -0700 Stephens-MacBook-Pro.local (1925)] INFO : Installing Net instrumentation
+[07/13/13 11:57:42 -0700 Stephens-MacBook-Pro.local (1925)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 11:57:42 -0700 Stephens-MacBook-Pro.local (1925)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 11:57:42 -0700 Stephens-MacBook-Pro.local (1925)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 11:57:42 -0700 Stephens-MacBook-Pro.local (1925)] INFO : Finished instrumentation
+[07/13/13 11:57:42 -0700 Stephens-MacBook-Pro.local (1925)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 11:58:17 -0700 Stephens-MacBook-Pro.local (2043)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 11:58:17 -0700 Stephens-MacBook-Pro.local (2043)] INFO : Starting the New Relic Agent.
+[07/13/13 11:58:17 -0700 Stephens-MacBook-Pro.local (2043)] INFO : Environment: test
+[07/13/13 11:58:17 -0700 Stephens-MacBook-Pro.local (2043)] INFO : Dispatcher: thin
+[07/13/13 11:58:17 -0700 Stephens-MacBook-Pro.local (2043)] INFO : Application: test
+[07/13/13 11:58:17 -0700 Stephens-MacBook-Pro.local (2043)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 11:58:17 -0700 Stephens-MacBook-Pro.local (2043)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 11:58:17 -0700 Stephens-MacBook-Pro.local (2043)] INFO : Installing DelayedJob instrumentation
+[07/13/13 11:58:17 -0700 Stephens-MacBook-Pro.local (2043)] INFO : Installing Net instrumentation
+[07/13/13 11:58:17 -0700 Stephens-MacBook-Pro.local (2043)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 11:58:17 -0700 Stephens-MacBook-Pro.local (2043)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 11:58:17 -0700 Stephens-MacBook-Pro.local (2043)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 11:58:17 -0700 Stephens-MacBook-Pro.local (2043)] INFO : Finished instrumentation
+[07/13/13 11:58:17 -0700 Stephens-MacBook-Pro.local (2043)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:05:29 -0700 Stephens-MacBook-Pro.local (2243)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:05:29 -0700 Stephens-MacBook-Pro.local (2243)] INFO : Starting the New Relic Agent.
+[07/13/13 12:05:29 -0700 Stephens-MacBook-Pro.local (2243)] INFO : Environment: test
+[07/13/13 12:05:29 -0700 Stephens-MacBook-Pro.local (2243)] INFO : Dispatcher: thin
+[07/13/13 12:05:29 -0700 Stephens-MacBook-Pro.local (2243)] INFO : Application: test
+[07/13/13 12:05:29 -0700 Stephens-MacBook-Pro.local (2243)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 12:05:29 -0700 Stephens-MacBook-Pro.local (2243)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:05:29 -0700 Stephens-MacBook-Pro.local (2243)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:05:29 -0700 Stephens-MacBook-Pro.local (2243)] INFO : Installing Net instrumentation
+[07/13/13 12:05:29 -0700 Stephens-MacBook-Pro.local (2243)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:05:29 -0700 Stephens-MacBook-Pro.local (2243)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:05:29 -0700 Stephens-MacBook-Pro.local (2243)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:05:29 -0700 Stephens-MacBook-Pro.local (2243)] INFO : Finished instrumentation
+[07/13/13 12:05:29 -0700 Stephens-MacBook-Pro.local (2243)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:06:16 -0700 Stephens-MacBook-Pro.local (2366)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:06:16 -0700 Stephens-MacBook-Pro.local (2366)] INFO : Starting the New Relic Agent.
+[07/13/13 12:06:16 -0700 Stephens-MacBook-Pro.local (2366)] INFO : Environment: development
+[07/13/13 12:06:16 -0700 Stephens-MacBook-Pro.local (2366)] INFO : Dispatcher: thin
+[07/13/13 12:06:16 -0700 Stephens-MacBook-Pro.local (2366)] INFO : Application: development
+[07/13/13 12:06:16 -0700 Stephens-MacBook-Pro.local (2366)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'development'
+[07/13/13 12:06:16 -0700 Stephens-MacBook-Pro.local (2366)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:06:16 -0700 Stephens-MacBook-Pro.local (2366)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:06:16 -0700 Stephens-MacBook-Pro.local (2366)] INFO : Installing Net instrumentation
+[07/13/13 12:06:16 -0700 Stephens-MacBook-Pro.local (2366)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:06:16 -0700 Stephens-MacBook-Pro.local (2366)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:06:16 -0700 Stephens-MacBook-Pro.local (2366)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:06:16 -0700 Stephens-MacBook-Pro.local (2366)] INFO : Finished instrumentation
+[07/13/13 12:06:16 -0700 Stephens-MacBook-Pro.local (2366)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:07:44 -0700 Stephens-MacBook-Pro.local (2410)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:07:44 -0700 Stephens-MacBook-Pro.local (2410)] INFO : Starting the New Relic Agent.
+[07/13/13 12:07:44 -0700 Stephens-MacBook-Pro.local (2410)] INFO : Environment: test
+[07/13/13 12:07:44 -0700 Stephens-MacBook-Pro.local (2410)] INFO : Dispatcher: thin
+[07/13/13 12:07:44 -0700 Stephens-MacBook-Pro.local (2410)] INFO : Application: test
+[07/13/13 12:07:44 -0700 Stephens-MacBook-Pro.local (2410)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 12:07:44 -0700 Stephens-MacBook-Pro.local (2410)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:07:44 -0700 Stephens-MacBook-Pro.local (2410)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:07:44 -0700 Stephens-MacBook-Pro.local (2410)] INFO : Installing Net instrumentation
+[07/13/13 12:07:44 -0700 Stephens-MacBook-Pro.local (2410)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:07:44 -0700 Stephens-MacBook-Pro.local (2410)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:07:44 -0700 Stephens-MacBook-Pro.local (2410)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:07:44 -0700 Stephens-MacBook-Pro.local (2410)] INFO : Finished instrumentation
+[07/13/13 12:07:44 -0700 Stephens-MacBook-Pro.local (2410)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:08:07 -0700 Stephens-MacBook-Pro.local (2427)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:08:07 -0700 Stephens-MacBook-Pro.local (2427)] INFO : Starting the New Relic Agent.
+[07/13/13 12:08:07 -0700 Stephens-MacBook-Pro.local (2427)] INFO : Environment: test
+[07/13/13 12:08:07 -0700 Stephens-MacBook-Pro.local (2427)] INFO : Dispatcher: thin
+[07/13/13 12:08:07 -0700 Stephens-MacBook-Pro.local (2427)] INFO : Application: test
+[07/13/13 12:08:07 -0700 Stephens-MacBook-Pro.local (2427)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 12:08:07 -0700 Stephens-MacBook-Pro.local (2427)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:08:07 -0700 Stephens-MacBook-Pro.local (2427)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:08:07 -0700 Stephens-MacBook-Pro.local (2427)] INFO : Installing Net instrumentation
+[07/13/13 12:08:07 -0700 Stephens-MacBook-Pro.local (2427)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:08:07 -0700 Stephens-MacBook-Pro.local (2427)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:08:07 -0700 Stephens-MacBook-Pro.local (2427)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:08:07 -0700 Stephens-MacBook-Pro.local (2427)] INFO : Finished instrumentation
+[07/13/13 12:08:07 -0700 Stephens-MacBook-Pro.local (2427)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:08:51 -0700 Stephens-MacBook-Pro.local (2452)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:08:51 -0700 Stephens-MacBook-Pro.local (2452)] INFO : Starting the New Relic Agent.
+[07/13/13 12:08:51 -0700 Stephens-MacBook-Pro.local (2452)] INFO : Environment: test
+[07/13/13 12:08:51 -0700 Stephens-MacBook-Pro.local (2452)] INFO : Dispatcher: thin
+[07/13/13 12:08:51 -0700 Stephens-MacBook-Pro.local (2452)] INFO : Application: test
+[07/13/13 12:08:51 -0700 Stephens-MacBook-Pro.local (2452)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 12:08:51 -0700 Stephens-MacBook-Pro.local (2452)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:08:51 -0700 Stephens-MacBook-Pro.local (2452)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:08:51 -0700 Stephens-MacBook-Pro.local (2452)] INFO : Installing Net instrumentation
+[07/13/13 12:08:51 -0700 Stephens-MacBook-Pro.local (2452)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:08:51 -0700 Stephens-MacBook-Pro.local (2452)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:08:51 -0700 Stephens-MacBook-Pro.local (2452)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:08:51 -0700 Stephens-MacBook-Pro.local (2452)] INFO : Finished instrumentation
+[07/13/13 12:08:51 -0700 Stephens-MacBook-Pro.local (2452)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:09:18 -0700 Stephens-MacBook-Pro.local (2473)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:09:18 -0700 Stephens-MacBook-Pro.local (2473)] INFO : Starting the New Relic Agent.
+[07/13/13 12:09:18 -0700 Stephens-MacBook-Pro.local (2473)] INFO : Environment: test
+[07/13/13 12:09:18 -0700 Stephens-MacBook-Pro.local (2473)] INFO : Dispatcher: thin
+[07/13/13 12:09:18 -0700 Stephens-MacBook-Pro.local (2473)] INFO : Application: test
+[07/13/13 12:09:18 -0700 Stephens-MacBook-Pro.local (2473)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 12:09:18 -0700 Stephens-MacBook-Pro.local (2473)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:09:18 -0700 Stephens-MacBook-Pro.local (2473)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:09:18 -0700 Stephens-MacBook-Pro.local (2473)] INFO : Installing Net instrumentation
+[07/13/13 12:09:18 -0700 Stephens-MacBook-Pro.local (2473)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:09:18 -0700 Stephens-MacBook-Pro.local (2473)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:09:18 -0700 Stephens-MacBook-Pro.local (2473)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:09:18 -0700 Stephens-MacBook-Pro.local (2473)] INFO : Finished instrumentation
+[07/13/13 12:09:18 -0700 Stephens-MacBook-Pro.local (2473)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:10:15 -0700 Stephens-MacBook-Pro.local (2503)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:10:15 -0700 Stephens-MacBook-Pro.local (2503)] INFO : Starting the New Relic Agent.
+[07/13/13 12:10:15 -0700 Stephens-MacBook-Pro.local (2503)] INFO : Environment: test
+[07/13/13 12:10:15 -0700 Stephens-MacBook-Pro.local (2503)] INFO : Dispatcher: thin
+[07/13/13 12:10:15 -0700 Stephens-MacBook-Pro.local (2503)] INFO : Application: test
+[07/13/13 12:10:15 -0700 Stephens-MacBook-Pro.local (2503)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 12:10:15 -0700 Stephens-MacBook-Pro.local (2503)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:10:15 -0700 Stephens-MacBook-Pro.local (2503)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:10:15 -0700 Stephens-MacBook-Pro.local (2503)] INFO : Installing Net instrumentation
+[07/13/13 12:10:15 -0700 Stephens-MacBook-Pro.local (2503)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:10:15 -0700 Stephens-MacBook-Pro.local (2503)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:10:15 -0700 Stephens-MacBook-Pro.local (2503)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:10:15 -0700 Stephens-MacBook-Pro.local (2503)] INFO : Finished instrumentation
+[07/13/13 12:10:15 -0700 Stephens-MacBook-Pro.local (2503)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:12:24 -0700 Stephens-MacBook-Pro.local (2565)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:12:24 -0700 Stephens-MacBook-Pro.local (2565)] INFO : Starting the New Relic Agent.
+[07/13/13 12:12:24 -0700 Stephens-MacBook-Pro.local (2565)] INFO : Environment: test
+[07/13/13 12:12:24 -0700 Stephens-MacBook-Pro.local (2565)] INFO : Dispatcher: thin
+[07/13/13 12:12:24 -0700 Stephens-MacBook-Pro.local (2565)] INFO : Application: test
+[07/13/13 12:12:24 -0700 Stephens-MacBook-Pro.local (2565)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 12:12:24 -0700 Stephens-MacBook-Pro.local (2565)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:12:24 -0700 Stephens-MacBook-Pro.local (2565)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:12:24 -0700 Stephens-MacBook-Pro.local (2565)] INFO : Installing Net instrumentation
+[07/13/13 12:12:24 -0700 Stephens-MacBook-Pro.local (2565)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:12:24 -0700 Stephens-MacBook-Pro.local (2565)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:12:24 -0700 Stephens-MacBook-Pro.local (2565)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:12:24 -0700 Stephens-MacBook-Pro.local (2565)] INFO : Finished instrumentation
+[07/13/13 12:12:24 -0700 Stephens-MacBook-Pro.local (2565)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:13:06 -0700 Stephens-MacBook-Pro.local (2588)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:13:06 -0700 Stephens-MacBook-Pro.local (2588)] INFO : Starting the New Relic Agent.
+[07/13/13 12:13:06 -0700 Stephens-MacBook-Pro.local (2588)] INFO : Environment: test
+[07/13/13 12:13:06 -0700 Stephens-MacBook-Pro.local (2588)] INFO : Dispatcher: thin
+[07/13/13 12:13:06 -0700 Stephens-MacBook-Pro.local (2588)] INFO : Application: test
+[07/13/13 12:13:06 -0700 Stephens-MacBook-Pro.local (2588)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 12:13:06 -0700 Stephens-MacBook-Pro.local (2588)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:13:06 -0700 Stephens-MacBook-Pro.local (2588)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:13:06 -0700 Stephens-MacBook-Pro.local (2588)] INFO : Installing Net instrumentation
+[07/13/13 12:13:06 -0700 Stephens-MacBook-Pro.local (2588)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:13:06 -0700 Stephens-MacBook-Pro.local (2588)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:13:06 -0700 Stephens-MacBook-Pro.local (2588)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:13:06 -0700 Stephens-MacBook-Pro.local (2588)] INFO : Finished instrumentation
+[07/13/13 12:13:06 -0700 Stephens-MacBook-Pro.local (2588)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:14:17 -0700 Stephens-MacBook-Pro.local (2625)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:14:17 -0700 Stephens-MacBook-Pro.local (2625)] INFO : Starting the New Relic Agent.
+[07/13/13 12:14:17 -0700 Stephens-MacBook-Pro.local (2625)] INFO : Environment: test
+[07/13/13 12:14:17 -0700 Stephens-MacBook-Pro.local (2625)] INFO : Dispatcher: thin
+[07/13/13 12:14:17 -0700 Stephens-MacBook-Pro.local (2625)] INFO : Application: test
+[07/13/13 12:14:17 -0700 Stephens-MacBook-Pro.local (2625)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 12:14:17 -0700 Stephens-MacBook-Pro.local (2625)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:14:17 -0700 Stephens-MacBook-Pro.local (2625)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:14:17 -0700 Stephens-MacBook-Pro.local (2625)] INFO : Installing Net instrumentation
+[07/13/13 12:14:17 -0700 Stephens-MacBook-Pro.local (2625)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:14:17 -0700 Stephens-MacBook-Pro.local (2625)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:14:17 -0700 Stephens-MacBook-Pro.local (2625)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:14:17 -0700 Stephens-MacBook-Pro.local (2625)] INFO : Finished instrumentation
+[07/13/13 12:14:17 -0700 Stephens-MacBook-Pro.local (2625)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:15:08 -0700 Stephens-MacBook-Pro.local (2654)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:15:08 -0700 Stephens-MacBook-Pro.local (2654)] INFO : Starting the New Relic Agent.
+[07/13/13 12:15:08 -0700 Stephens-MacBook-Pro.local (2654)] INFO : Environment: test
+[07/13/13 12:15:08 -0700 Stephens-MacBook-Pro.local (2654)] INFO : Dispatcher: thin
+[07/13/13 12:15:08 -0700 Stephens-MacBook-Pro.local (2654)] INFO : Application: test
+[07/13/13 12:15:08 -0700 Stephens-MacBook-Pro.local (2654)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 12:15:08 -0700 Stephens-MacBook-Pro.local (2654)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:15:08 -0700 Stephens-MacBook-Pro.local (2654)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:15:08 -0700 Stephens-MacBook-Pro.local (2654)] INFO : Installing Net instrumentation
+[07/13/13 12:15:08 -0700 Stephens-MacBook-Pro.local (2654)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:15:08 -0700 Stephens-MacBook-Pro.local (2654)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:15:08 -0700 Stephens-MacBook-Pro.local (2654)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:15:08 -0700 Stephens-MacBook-Pro.local (2654)] INFO : Finished instrumentation
+[07/13/13 12:15:08 -0700 Stephens-MacBook-Pro.local (2654)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:15:28 -0700 Stephens-MacBook-Pro.local (2670)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:15:28 -0700 Stephens-MacBook-Pro.local (2670)] INFO : Starting the New Relic Agent.
+[07/13/13 12:15:28 -0700 Stephens-MacBook-Pro.local (2670)] INFO : Environment: test
+[07/13/13 12:15:28 -0700 Stephens-MacBook-Pro.local (2670)] INFO : Dispatcher: thin
+[07/13/13 12:15:28 -0700 Stephens-MacBook-Pro.local (2670)] INFO : Application: test
+[07/13/13 12:15:28 -0700 Stephens-MacBook-Pro.local (2670)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 12:15:28 -0700 Stephens-MacBook-Pro.local (2670)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:15:28 -0700 Stephens-MacBook-Pro.local (2670)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:15:28 -0700 Stephens-MacBook-Pro.local (2670)] INFO : Installing Net instrumentation
+[07/13/13 12:15:28 -0700 Stephens-MacBook-Pro.local (2670)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:15:28 -0700 Stephens-MacBook-Pro.local (2670)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:15:28 -0700 Stephens-MacBook-Pro.local (2670)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:15:28 -0700 Stephens-MacBook-Pro.local (2670)] INFO : Finished instrumentation
+[07/13/13 12:15:28 -0700 Stephens-MacBook-Pro.local (2670)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:16:33 -0700 Stephens-MacBook-Pro.local (2704)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:16:33 -0700 Stephens-MacBook-Pro.local (2704)] INFO : Starting the New Relic Agent.
+[07/13/13 12:16:33 -0700 Stephens-MacBook-Pro.local (2704)] INFO : Environment: test
+[07/13/13 12:16:33 -0700 Stephens-MacBook-Pro.local (2704)] INFO : Dispatcher: thin
+[07/13/13 12:16:33 -0700 Stephens-MacBook-Pro.local (2704)] INFO : Application: test
+[07/13/13 12:16:33 -0700 Stephens-MacBook-Pro.local (2704)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 12:16:33 -0700 Stephens-MacBook-Pro.local (2704)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:16:33 -0700 Stephens-MacBook-Pro.local (2704)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:16:33 -0700 Stephens-MacBook-Pro.local (2704)] INFO : Installing Net instrumentation
+[07/13/13 12:16:33 -0700 Stephens-MacBook-Pro.local (2704)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:16:33 -0700 Stephens-MacBook-Pro.local (2704)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:16:33 -0700 Stephens-MacBook-Pro.local (2704)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:16:33 -0700 Stephens-MacBook-Pro.local (2704)] INFO : Finished instrumentation
+[07/13/13 12:16:33 -0700 Stephens-MacBook-Pro.local (2704)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:17:10 -0700 Stephens-MacBook-Pro.local (2726)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:17:10 -0700 Stephens-MacBook-Pro.local (2726)] INFO : Starting the New Relic Agent.
+[07/13/13 12:17:10 -0700 Stephens-MacBook-Pro.local (2726)] INFO : Environment: test
+[07/13/13 12:17:10 -0700 Stephens-MacBook-Pro.local (2726)] INFO : Dispatcher: thin
+[07/13/13 12:17:10 -0700 Stephens-MacBook-Pro.local (2726)] INFO : Application: test
+[07/13/13 12:17:10 -0700 Stephens-MacBook-Pro.local (2726)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 12:17:10 -0700 Stephens-MacBook-Pro.local (2726)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:17:10 -0700 Stephens-MacBook-Pro.local (2726)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:17:10 -0700 Stephens-MacBook-Pro.local (2726)] INFO : Installing Net instrumentation
+[07/13/13 12:17:10 -0700 Stephens-MacBook-Pro.local (2726)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:17:10 -0700 Stephens-MacBook-Pro.local (2726)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:17:10 -0700 Stephens-MacBook-Pro.local (2726)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:17:10 -0700 Stephens-MacBook-Pro.local (2726)] INFO : Finished instrumentation
+[07/13/13 12:17:10 -0700 Stephens-MacBook-Pro.local (2726)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:19:50 -0700 Stephens-MacBook-Pro.local (2813)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:19:50 -0700 Stephens-MacBook-Pro.local (2813)] INFO : Starting the New Relic Agent.
+[07/13/13 12:19:50 -0700 Stephens-MacBook-Pro.local (2813)] INFO : Environment: development
+[07/13/13 12:19:50 -0700 Stephens-MacBook-Pro.local (2813)] INFO : Dispatcher: thin
+[07/13/13 12:19:50 -0700 Stephens-MacBook-Pro.local (2813)] INFO : Application: development
+[07/13/13 12:19:50 -0700 Stephens-MacBook-Pro.local (2813)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'development'
+[07/13/13 12:19:50 -0700 Stephens-MacBook-Pro.local (2813)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:19:50 -0700 Stephens-MacBook-Pro.local (2813)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:19:50 -0700 Stephens-MacBook-Pro.local (2813)] INFO : Installing Net instrumentation
+[07/13/13 12:19:50 -0700 Stephens-MacBook-Pro.local (2813)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:19:50 -0700 Stephens-MacBook-Pro.local (2813)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:19:50 -0700 Stephens-MacBook-Pro.local (2813)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:19:50 -0700 Stephens-MacBook-Pro.local (2813)] INFO : Finished instrumentation
+[07/13/13 12:19:50 -0700 Stephens-MacBook-Pro.local (2813)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:20:47 -0700 Stephens-MacBook-Pro.local (2845)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:20:47 -0700 Stephens-MacBook-Pro.local (2845)] INFO : Starting the New Relic Agent.
+[07/13/13 12:20:47 -0700 Stephens-MacBook-Pro.local (2845)] INFO : Environment: test
+[07/13/13 12:20:47 -0700 Stephens-MacBook-Pro.local (2845)] INFO : Dispatcher: thin
+[07/13/13 12:20:47 -0700 Stephens-MacBook-Pro.local (2845)] INFO : Application: test
+[07/13/13 12:20:47 -0700 Stephens-MacBook-Pro.local (2845)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 12:20:47 -0700 Stephens-MacBook-Pro.local (2845)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:20:47 -0700 Stephens-MacBook-Pro.local (2845)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:20:47 -0700 Stephens-MacBook-Pro.local (2845)] INFO : Installing Net instrumentation
+[07/13/13 12:20:47 -0700 Stephens-MacBook-Pro.local (2845)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:20:47 -0700 Stephens-MacBook-Pro.local (2845)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:20:47 -0700 Stephens-MacBook-Pro.local (2845)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:20:47 -0700 Stephens-MacBook-Pro.local (2845)] INFO : Finished instrumentation
+[07/13/13 12:20:47 -0700 Stephens-MacBook-Pro.local (2845)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:21:15 -0700 Stephens-MacBook-Pro.local (2865)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:21:15 -0700 Stephens-MacBook-Pro.local (2865)] INFO : Starting the New Relic Agent.
+[07/13/13 12:21:15 -0700 Stephens-MacBook-Pro.local (2865)] INFO : Environment: test
+[07/13/13 12:21:15 -0700 Stephens-MacBook-Pro.local (2865)] INFO : Dispatcher: thin
+[07/13/13 12:21:15 -0700 Stephens-MacBook-Pro.local (2865)] INFO : Application: test
+[07/13/13 12:21:15 -0700 Stephens-MacBook-Pro.local (2865)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 12:21:15 -0700 Stephens-MacBook-Pro.local (2865)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:21:15 -0700 Stephens-MacBook-Pro.local (2865)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:21:15 -0700 Stephens-MacBook-Pro.local (2865)] INFO : Installing Net instrumentation
+[07/13/13 12:21:15 -0700 Stephens-MacBook-Pro.local (2865)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:21:15 -0700 Stephens-MacBook-Pro.local (2865)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:21:15 -0700 Stephens-MacBook-Pro.local (2865)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:21:15 -0700 Stephens-MacBook-Pro.local (2865)] INFO : Finished instrumentation
+[07/13/13 12:21:15 -0700 Stephens-MacBook-Pro.local (2865)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:21:52 -0700 Stephens-MacBook-Pro.local (2887)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:21:52 -0700 Stephens-MacBook-Pro.local (2887)] INFO : Starting the New Relic Agent.
+[07/13/13 12:21:52 -0700 Stephens-MacBook-Pro.local (2887)] INFO : Environment: test
+[07/13/13 12:21:52 -0700 Stephens-MacBook-Pro.local (2887)] INFO : Dispatcher: thin
+[07/13/13 12:21:52 -0700 Stephens-MacBook-Pro.local (2887)] INFO : Application: test
+[07/13/13 12:21:52 -0700 Stephens-MacBook-Pro.local (2887)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 12:21:52 -0700 Stephens-MacBook-Pro.local (2887)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:21:52 -0700 Stephens-MacBook-Pro.local (2887)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:21:52 -0700 Stephens-MacBook-Pro.local (2887)] INFO : Installing Net instrumentation
+[07/13/13 12:21:52 -0700 Stephens-MacBook-Pro.local (2887)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:21:52 -0700 Stephens-MacBook-Pro.local (2887)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:21:52 -0700 Stephens-MacBook-Pro.local (2887)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:21:52 -0700 Stephens-MacBook-Pro.local (2887)] INFO : Finished instrumentation
+[07/13/13 12:21:52 -0700 Stephens-MacBook-Pro.local (2887)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:23:33 -0700 Stephens-MacBook-Pro.local (2943)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:23:33 -0700 Stephens-MacBook-Pro.local (2943)] INFO : Starting the New Relic Agent.
+[07/13/13 12:23:33 -0700 Stephens-MacBook-Pro.local (2943)] INFO : Environment: development
+[07/13/13 12:23:33 -0700 Stephens-MacBook-Pro.local (2943)] INFO : Dispatcher: thin
+[07/13/13 12:23:33 -0700 Stephens-MacBook-Pro.local (2943)] INFO : Application: development
+[07/13/13 12:23:33 -0700 Stephens-MacBook-Pro.local (2943)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'development'
+[07/13/13 12:23:33 -0700 Stephens-MacBook-Pro.local (2943)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:23:33 -0700 Stephens-MacBook-Pro.local (2943)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:23:33 -0700 Stephens-MacBook-Pro.local (2943)] INFO : Installing Net instrumentation
+[07/13/13 12:23:33 -0700 Stephens-MacBook-Pro.local (2943)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:23:33 -0700 Stephens-MacBook-Pro.local (2943)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:23:33 -0700 Stephens-MacBook-Pro.local (2943)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:23:33 -0700 Stephens-MacBook-Pro.local (2943)] INFO : Finished instrumentation
+[07/13/13 12:23:33 -0700 Stephens-MacBook-Pro.local (2943)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:37:22 -0700 Stephens-MacBook-Pro.local (3313)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:37:22 -0700 Stephens-MacBook-Pro.local (3313)] INFO : Starting the New Relic Agent.
+[07/13/13 12:37:22 -0700 Stephens-MacBook-Pro.local (3313)] INFO : Environment: test
+[07/13/13 12:37:22 -0700 Stephens-MacBook-Pro.local (3313)] INFO : Dispatcher: thin
+[07/13/13 12:37:22 -0700 Stephens-MacBook-Pro.local (3313)] INFO : Application: test
+[07/13/13 12:37:22 -0700 Stephens-MacBook-Pro.local (3313)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 12:37:22 -0700 Stephens-MacBook-Pro.local (3313)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:37:22 -0700 Stephens-MacBook-Pro.local (3313)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:37:22 -0700 Stephens-MacBook-Pro.local (3313)] INFO : Installing Net instrumentation
+[07/13/13 12:37:22 -0700 Stephens-MacBook-Pro.local (3313)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:37:22 -0700 Stephens-MacBook-Pro.local (3313)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:37:22 -0700 Stephens-MacBook-Pro.local (3313)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:37:22 -0700 Stephens-MacBook-Pro.local (3313)] INFO : Finished instrumentation
+[07/13/13 12:37:22 -0700 Stephens-MacBook-Pro.local (3313)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:57:07 -0700 Stephens-MacBook-Pro.local (3834)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:57:07 -0700 Stephens-MacBook-Pro.local (3834)] INFO : Starting the New Relic Agent.
+[07/13/13 12:57:07 -0700 Stephens-MacBook-Pro.local (3834)] INFO : Environment: test
+[07/13/13 12:57:07 -0700 Stephens-MacBook-Pro.local (3834)] INFO : Dispatcher: thin
+[07/13/13 12:57:07 -0700 Stephens-MacBook-Pro.local (3834)] INFO : Application: test
+[07/13/13 12:57:07 -0700 Stephens-MacBook-Pro.local (3834)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 12:57:07 -0700 Stephens-MacBook-Pro.local (3834)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:57:07 -0700 Stephens-MacBook-Pro.local (3834)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:57:07 -0700 Stephens-MacBook-Pro.local (3834)] INFO : Installing Net instrumentation
+[07/13/13 12:57:07 -0700 Stephens-MacBook-Pro.local (3834)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:57:07 -0700 Stephens-MacBook-Pro.local (3834)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:57:07 -0700 Stephens-MacBook-Pro.local (3834)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:57:07 -0700 Stephens-MacBook-Pro.local (3834)] INFO : Finished instrumentation
+[07/13/13 12:57:07 -0700 Stephens-MacBook-Pro.local (3834)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:58:33 -0700 Stephens-MacBook-Pro.local (3877)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:58:33 -0700 Stephens-MacBook-Pro.local (3877)] INFO : Starting the New Relic Agent.
+[07/13/13 12:58:33 -0700 Stephens-MacBook-Pro.local (3877)] INFO : Environment: test
+[07/13/13 12:58:33 -0700 Stephens-MacBook-Pro.local (3877)] INFO : Dispatcher: thin
+[07/13/13 12:58:33 -0700 Stephens-MacBook-Pro.local (3877)] INFO : Application: test
+[07/13/13 12:58:33 -0700 Stephens-MacBook-Pro.local (3877)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 12:58:33 -0700 Stephens-MacBook-Pro.local (3877)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:58:33 -0700 Stephens-MacBook-Pro.local (3877)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:58:33 -0700 Stephens-MacBook-Pro.local (3877)] INFO : Installing Net instrumentation
+[07/13/13 12:58:33 -0700 Stephens-MacBook-Pro.local (3877)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:58:33 -0700 Stephens-MacBook-Pro.local (3877)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:58:33 -0700 Stephens-MacBook-Pro.local (3877)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:58:33 -0700 Stephens-MacBook-Pro.local (3877)] INFO : Finished instrumentation
+[07/13/13 12:58:33 -0700 Stephens-MacBook-Pro.local (3877)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 12:59:36 -0700 Stephens-MacBook-Pro.local (3910)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 12:59:36 -0700 Stephens-MacBook-Pro.local (3910)] INFO : Starting the New Relic Agent.
+[07/13/13 12:59:36 -0700 Stephens-MacBook-Pro.local (3910)] INFO : Environment: development
+[07/13/13 12:59:36 -0700 Stephens-MacBook-Pro.local (3910)] INFO : Dispatcher: thin
+[07/13/13 12:59:36 -0700 Stephens-MacBook-Pro.local (3910)] INFO : Application: development
+[07/13/13 12:59:36 -0700 Stephens-MacBook-Pro.local (3910)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'development'
+[07/13/13 12:59:36 -0700 Stephens-MacBook-Pro.local (3910)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 12:59:36 -0700 Stephens-MacBook-Pro.local (3910)] INFO : Installing DelayedJob instrumentation
+[07/13/13 12:59:36 -0700 Stephens-MacBook-Pro.local (3910)] INFO : Installing Net instrumentation
+[07/13/13 12:59:36 -0700 Stephens-MacBook-Pro.local (3910)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 12:59:36 -0700 Stephens-MacBook-Pro.local (3910)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 12:59:36 -0700 Stephens-MacBook-Pro.local (3910)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 12:59:36 -0700 Stephens-MacBook-Pro.local (3910)] INFO : Finished instrumentation
+[07/13/13 12:59:36 -0700 Stephens-MacBook-Pro.local (3910)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[07/13/13 13:00:01 -0700 Stephens-MacBook-Pro.local (3932)] ERROR : Unable to read configuration file : can't convert nil into String
+[07/13/13 13:00:01 -0700 Stephens-MacBook-Pro.local (3932)] INFO : Starting the New Relic Agent.
+[07/13/13 13:00:01 -0700 Stephens-MacBook-Pro.local (3932)] INFO : Environment: test
+[07/13/13 13:00:01 -0700 Stephens-MacBook-Pro.local (3932)] INFO : Dispatcher: thin
+[07/13/13 13:00:01 -0700 Stephens-MacBook-Pro.local (3932)] INFO : Application: test
+[07/13/13 13:00:01 -0700 Stephens-MacBook-Pro.local (3932)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'test'
+[07/13/13 13:00:01 -0700 Stephens-MacBook-Pro.local (3932)] INFO : Installing DelayedJob instrumentation hooks
+[07/13/13 13:00:01 -0700 Stephens-MacBook-Pro.local (3932)] INFO : Installing DelayedJob instrumentation
+[07/13/13 13:00:01 -0700 Stephens-MacBook-Pro.local (3932)] INFO : Installing Net instrumentation
+[07/13/13 13:00:01 -0700 Stephens-MacBook-Pro.local (3932)] INFO : Installing Rails 3 Controller instrumentation
+[07/13/13 13:00:01 -0700 Stephens-MacBook-Pro.local (3932)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[07/13/13 13:00:01 -0700 Stephens-MacBook-Pro.local (3932)] INFO : Installing Rails3 Error instrumentation
+[07/13/13 13:00:01 -0700 Stephens-MacBook-Pro.local (3932)] INFO : Finished instrumentation
+[07/13/13 13:00:01 -0700 Stephens-MacBook-Pro.local (3932)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
