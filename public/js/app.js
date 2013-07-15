@@ -129,20 +129,24 @@
 
       function PlaceView() {
         this.render = __bind(this.render, this);
+        this.removePlace = __bind(this.removePlace, this);
+        this.initialize = __bind(this.initialize, this);
         _ref4 = PlaceView.__super__.constructor.apply(this, arguments);
         return _ref4;
       }
 
+      PlaceView.prototype.tagName = 'li';
+
       PlaceView.prototype.el = 'ul#places';
 
-      PlaceView.prototype.tagName = 'li';
+      PlaceView.prototype.attributes = {
+        'data-id': 'hello'
+      };
 
       PlaceView.prototype.initialize = function(place) {
         this.model = place;
-        return $(this.el).append(this.render);
+        return this.render();
       };
-
-      PlaceView.prototype.template = "<li><a href=\"{{location_url}}\">{{name}}</a><span class=\"destroy\">[X]</span></li>";
 
       PlaceView.prototype.events = function() {
         return {
@@ -150,12 +154,17 @@
         };
       };
 
-      PlaceView.prototype.removePlace = function() {
-        return this.model.destroy();
+      PlaceView.prototype.removePlace = function(e) {
+        var name;
+        e.preventDefault();
+        name = this.model.get("name");
+        return console.log(name);
       };
 
+      PlaceView.prototype.template = '<a href="{{location_url}}">{{name}}</a><span class="destroy">[X]</span>';
+
       PlaceView.prototype.render = function() {
-        return templayed(this.template)(this.model.attributes);
+        return $(this.el).append(templayed(this.template)(this.model.attributes));
       };
 
       return PlaceView;
@@ -177,7 +186,7 @@
         var _this = this;
         this.collection = new Places();
         $(this.el).html("<div><a href=\"/#logout\">[Logout]</a></div>\n<input id=\"new-place\" placeholder=\"Name you waypoint\">\n<ul id='places'></ul>");
-        this.collection.on('add remove reset sort change sync', (function() {
+        this.collection.on('add remove reset sort', (function() {
           return _this.render();
         }));
         return this.collection.fetch({

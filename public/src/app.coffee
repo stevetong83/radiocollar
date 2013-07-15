@@ -30,6 +30,12 @@ $ ->
       #Why do I need to call the callbacks like that?
       @model.save {email: $('#email').val(), password: $('#password').val()}, {success: ( => @proceed()) , error: ( => @ohNo())}
 
+
+
+
+
+
+
   class window.Place extends Backbone.Model
     initialize: () ->
       @set('lat', compass.lat)
@@ -49,18 +55,22 @@ $ ->
     model: Place
 
   class window.PlaceView extends Backbone.View
-    el:      'ul#places'
     tagName: 'li'
-    initialize: (place) ->
+    el: 'ul#places'
+    attributes:
+      'data-id': 'hello'
+    initialize: (place) =>
       @model = place
-      $(@el).append(@render)
-    template: """<li><a href="{{location_url}}">{{name}}</a><span class="destroy">[X]</span></li>"""
+      @render()
     events: ->
       "click .destroy" : "removePlace"
-    removePlace: ->
-      @model.destroy()
+    removePlace: (e) =>
+      e.preventDefault()
+      name = @model.get("name")
+      console.log name
+    template: '<a href="{{location_url}}">{{name}}</a><span class="destroy">[X]</span>'
     render: =>
-      templayed(@template)(@model.attributes)
+      $(@el).append templayed(@template)(@model.attributes)
 
   class window.PlacesView extends Backbone.View
     el:      $('#content')
@@ -71,7 +81,7 @@ $ ->
         <input id="new-place" placeholder="Name you waypoint">
         <ul id='places'></ul>
         """
-      @collection.on('add remove reset sort change sync', (=> @render()))
+      @collection.on('add remove reset sort', (=> @render()))
       @collection.fetch
         data: {authentication_token: localStorage.auth_token}
         success: ( => @render())
@@ -95,6 +105,15 @@ $ ->
         #probably a better way of doing this...
         $('#new-place').val('')
 
+
+
+
+
+
+
+
+
+
   class window.RadioCollarRouter extends Backbone.Router
     routes:
       ""      : "home"
@@ -117,6 +136,7 @@ $ ->
   Backbone.history.start()
 
 ##REFACTOR:
+# - Take as much stuff out of the $ -> as possible.
 # - Stop calling localStorage.auth_token. Use the model itself. Or store the model in local storage. Or everything in localstorage
 # - Asign relevant DOM attributes to view attributes. Stop calling DOM directly so much.
 # - Get rid of all the global vars when you're done hacking. If I must has globals, put them into the App namespace
