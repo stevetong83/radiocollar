@@ -6,10 +6,11 @@ gem 'rails', '3.2.13'
 group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
-  gem "rspec-rails"
+  gem 'rspec-rails'
   gem 'launchy'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
+  gem 'selenium-webdriver'
 end
 
 # Gems used only for assets and not required
@@ -41,4 +42,3 @@ gem "mongoid_shortener"
 gem "yab62", require: "yab62"
 
 gem 'rack-jsonp-middleware'
-

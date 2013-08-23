@@ -57,8 +57,10 @@
         });
       };
 
+      SessionView.prototype.attempts = 0;
+
       SessionView.prototype.ohNo = function() {
-        return alert('Failed to login. Check your email, password and internet connection.');
+        return $('#go').text("" + (++this.attempts) + " failed login attempts. Try again.");
       };
 
       SessionView.prototype.authenticate = function() {
@@ -129,7 +131,6 @@
 
       function PlaceView() {
         this.render = __bind(this.render, this);
-        this.removePlace = __bind(this.removePlace, this);
         this.initialize = __bind(this.initialize, this);
         _ref4 = PlaceView.__super__.constructor.apply(this, arguments);
         return _ref4;
@@ -139,12 +140,11 @@
 
       PlaceView.prototype.el = 'ul#places';
 
-      PlaceView.prototype.attributes = {
-        'data-id': 'hello'
-      };
-
       PlaceView.prototype.initialize = function(place) {
         this.model = place;
+        _.bindAll(this, "render", "remove");
+        this.model.bind("change", this.render);
+        this.model.bind("destroy", this.remove);
         return this.render();
       };
 
@@ -154,11 +154,8 @@
         };
       };
 
-      PlaceView.prototype.removePlace = function(e) {
-        var name;
-        e.preventDefault();
-        name = this.model.get("name");
-        return console.log(name);
+      PlaceView.prototype.removePlace = function() {
+        return this.model.destroy();
       };
 
       PlaceView.prototype.template = '<a href="{{location_url}}">{{name}}</a><span class="destroy">[X]</span>';
@@ -189,7 +186,7 @@
         this.collection.on('add remove reset sort', (function() {
           return _this.render();
         }));
-        return this.collection.fetch({
+        this.collection.fetch({
           data: {
             authentication_token: localStorage.auth_token
           },
@@ -197,7 +194,14 @@
             return _this.render();
           })
         });
+        return _.bindAll(this, "render");
       };
+
+      PlacesView.template = _.template($("#ideas-template").html());
+
+      PlacesView.collection.bind("reset", PlacesView.render);
+
+      PlacesView.collection.bind("change", PlacesView.render);
 
       PlacesView.prototype.events = function() {
         return {
@@ -250,12 +254,12 @@
       }
 
       RadioCollarRouter.prototype.routes = {
-        "": "home",
+        "": "login",
         "main": "main",
         "logout": "logout"
       };
 
-      RadioCollarRouter.prototype.home = function() {
+      RadioCollarRouter.prototype.login = function() {
         if (localStorage.auth_token != null) {
           return App.navigate('/main', {
             trigger: true

@@ -20,17 +20,15 @@ $ ->
       "click #go" : "authenticate"
     render: ->
       $(@el).html(@template)
-    proceed: () =>
+    proceed: =>
       #Override backbone.sync to attach the token.
       localStorage.auth_token = @model.get('authentication_token')
       App.navigate('/main', trigger: yes)
-    ohNo: () ->
-      alert 'Failed to login. Check your email, password and internet connection.'
+    attempts: 0
+    ohNo: ->
+      $('#go').text("#{++@attempts} failed login attempts. Try again.")
     authenticate: ->
-      #Why do I need to call the callbacks like that?
       @model.save {email: $('#email').val(), password: $('#password').val()}, {success: ( => @proceed()) , error: ( => @ohNo())}
-
-
 
 
 
@@ -57,17 +55,16 @@ $ ->
   class window.PlaceView extends Backbone.View
     tagName: 'li'
     el: 'ul#places'
-    attributes:
-      'data-id': 'hello'
     initialize: (place) =>
       @model = place
+      _.bindAll this, "render", "remove"
+      @model.bind "change", @render
+      @model.bind "destroy", @remove
       @render()
     events: ->
       "click .destroy" : "removePlace"
-    removePlace: (e) =>
-      e.preventDefault()
-      name = @model.get("name")
-      console.log name
+    removePlace: ->
+      @model.destroy()
     template: '<a href="{{location_url}}">{{name}}</a><span class="destroy">[X]</span>'
     render: =>
       $(@el).append templayed(@template)(@model.attributes)
@@ -85,6 +82,10 @@ $ ->
       @collection.fetch
         data: {authentication_token: localStorage.auth_token}
         success: ( => @render())
+      _.bindAll this, "render"
+    @template = _.template($("#ideas-template").html())
+    @collection.bind "reset", @render
+    @collection.bind "change", @render
     events: ->
       "keypress #new-place" : "createOnEnter"
     render: =>
@@ -116,10 +117,10 @@ $ ->
 
   class window.RadioCollarRouter extends Backbone.Router
     routes:
-      ""      : "home"
+      ""      : "login"
       "main"  : "main"
       "logout": "logout"
-    home: ->
+    login: ->
       if localStorage.auth_token?
         return App.navigate('/main', trigger: yes)
       else
