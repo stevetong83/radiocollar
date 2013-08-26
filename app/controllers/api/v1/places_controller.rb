@@ -41,6 +41,7 @@ class Api::V1::PlacesController < Api::V1::ApiController
   # == DELETE /api/v1/places/:id
   # Authenticate the user and save location
   def destroy
+
     @place = Place.find params[:id]
     @place.destroy
     render json: {message: "Place has been deleted"}, success: true, status: 200

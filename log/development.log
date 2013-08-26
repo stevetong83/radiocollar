@@ -3701,3 +3701,534 @@ WARNING: Can't verify CSRF token authenticity
   MOPED: 127.0.0.1:27017 INSERT       database=radio_collar_development collection=mongoid_shortener_shortened_urls documents=[{"_id"=>"5217fa620e88504a00000007", "use_count"=>0, "url"=>"http://maps.google.com/maps?q=33.6968327,+-112.1270559+(FINISHED!)", "unique_key"=>"o", "updated_at"=>2013-08-24 00:12:18 UTC, "created_at"=>2013-08-24 00:12:18 UTC}] flags=[] (0.1152ms)
   MOPED: 127.0.0.1:27017 INSERT       database=radio_collar_development collection=places documents=[{"_id"=>"5217fa620e88504a00000008", "name"=>"FINISHED!", "lat"=>33.6968327, "long"=>-112.1270559, "location_url"=>"http://localhost:3000/~o", "user_id"=>"5216ee0b0e8850f148000001", "updated_at"=>2013-08-24 00:12:18 UTC, "created_at"=>2013-08-24 00:12:18 UTC}] flags=[] (0.0951ms)
 Completed 200 OK in 8ms (Views: 0.1ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8352ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=radio_collar_development command={:count=>"places", :query=>{}} (0.2050ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=radio_collar_development command={:count=>"places", :query=>{}} (0.3798ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-23 17:28:59 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2491ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (2.5361ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.4550ms)
+Completed 200 OK in 14ms (Views: 0.1ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-23 17:30:14 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9591ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.8529ms)
+Completed 200 OK in 16ms (Views: 0.1ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-23 17:30:17 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.2089ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0879ms)
+Completed 200 OK in 14ms (Views: 0.1ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-23 17:35:14 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4539ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7539ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.8033ms)
+Completed 200 OK in 15ms (Views: 0.1ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-23 17:35:32 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (4.0061ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0400ms)
+Completed 200 OK in 12ms (Views: 0.1ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-23 17:35:39 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.8500ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.0622ms)
+Completed 200 OK in 11ms (Views: 0.1ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-23 17:36:52 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6280ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.4651ms)
+Completed 200 OK in 11ms (Views: 0.1ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-23 17:50:35 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1818ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6678ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6292ms)
+Completed 200 OK in 10ms (Views: 0.1ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-23 17:50:47 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6459ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6924ms)
+Completed 200 OK in 6ms (Views: 0.1ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-23 17:56:40 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4822ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (5.7161ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.4741ms)
+Completed 200 OK in 16ms (Views: 0.1ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-23 20:42:11 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0109ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (272.0959ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.6050ms)
+Completed 200 OK in 863ms (Views: 0.3ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-23 20:42:17 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7310ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.1439ms)
+Completed 200 OK in 9ms (Views: 0.1ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-23 21:14:33 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4230ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7648ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.2131ms)
+Completed 200 OK in 11ms (Views: 0.1ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-23 21:15:12 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6132ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.0697ms)
+Completed 200 OK in 10ms (Views: 0.1ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-23 21:16:02 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5088ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.7281ms)
+Completed 200 OK in 9ms (Views: 0.1ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-23 21:16:32 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8149ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9091ms)
+Completed 200 OK in 9ms (Views: 0.1ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-23 21:24:25 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.5821ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7098ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.1761ms)
+Completed 200 OK in 11ms (Views: 0.1ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-23 22:45:39 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.3459ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6158ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6268ms)
+Completed 200 OK in 24ms (Views: 0.1ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-25 19:14:46 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2710ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (300.6690ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.9609ms)
+Completed 200 OK in 584ms (Views: 0.4ms)
+
+
+Started DELETE "/api/v1/places" for 127.0.0.1 at 2013-08-25 19:16:54 -0700
+
+ActionController::RoutingError (No route matches [DELETE] "/api/v1/places"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.3ms)
+
+
+Started DELETE "/api/v1/places" for 127.0.0.1 at 2013-08-25 19:16:54 -0700
+
+ActionController::RoutingError (No route matches [DELETE] "/api/v1/places"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-25 19:26:03 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1032ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (3.5820ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (4.8099ms)
+Completed 200 OK in 20ms (Views: 0.2ms)
+
+
+Started DELETE "/api/v1/places" for 127.0.0.1 at 2013-08-25 19:28:08 -0700
+
+ActionController::RoutingError (No route matches [DELETE] "/api/v1/places"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-25 19:31:30 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.1810ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8011ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9410ms)
+Completed 200 OK in 20ms (Views: 0.2ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-25 19:37:02 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3189ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6831ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.8991ms)
+Completed 200 OK in 10ms (Views: 0.2ms)
+
+
+Started DELETE "/api/v1/places/5217fa620e88504a00000008" for 127.0.0.1 at 2013-08-25 19:37:04 -0700
+Processing by Api::V1::PlacesController#destroy as JSON
+  Parameters: {"id"=>"5217fa620e88504a00000008"}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>nil}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5929ms)
+Completed 404 Not Found in 168ms
+
+Mongoid::Errors::DocumentNotFound (
+Problem:
+  Document not found for class User with attributes {:authentication_token=>nil}.
+Summary:
+  When calling User.find_by with a hash of attributes, all attributes provided must match a document in the database or this error will be raised.
+Resolution:
+  Search for attributes that are in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error.):
+  app/controllers/api/v1/api_controller.rb:6:in `verify_user'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.0ms)
+
+
+Started DELETE "/api/v1/places/5217abbe0e8850b3bc000002" for 127.0.0.1 at 2013-08-25 19:37:16 -0700
+Processing by Api::V1::PlacesController#destroy as JSON
+  Parameters: {"id"=>"5217abbe0e8850b3bc000002"}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>nil}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5240ms)
+Completed 404 Not Found in 2ms
+
+Mongoid::Errors::DocumentNotFound (
+Problem:
+  Document not found for class User with attributes {:authentication_token=>nil}.
+Summary:
+  When calling User.find_by with a hash of attributes, all attributes provided must match a document in the database or this error will be raised.
+Resolution:
+  Search for attributes that are in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error.):
+  app/controllers/api/v1/api_controller.rb:6:in `verify_user'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.2ms)
+
+
+Started DELETE "/api/v1/places/5217f9320e88504a00000002" for 127.0.0.1 at 2013-08-25 19:37:18 -0700
+Processing by Api::V1::PlacesController#destroy as JSON
+  Parameters: {"id"=>"5217f9320e88504a00000002"}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>nil}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5209ms)
+Completed 404 Not Found in 2ms
+
+Mongoid::Errors::DocumentNotFound (
+Problem:
+  Document not found for class User with attributes {:authentication_token=>nil}.
+Summary:
+  When calling User.find_by with a hash of attributes, all attributes provided must match a document in the database or this error will be raised.
+Resolution:
+  Search for attributes that are in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error.):
+  app/controllers/api/v1/api_controller.rb:6:in `verify_user'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.3ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-25 19:38:08 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7570ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.9522ms)
+Completed 200 OK in 11ms (Views: 0.3ms)
+
+
+Started DELETE "/api/v1/places/5217f9320e88504a00000002" for 127.0.0.1 at 2013-08-25 19:38:09 -0700
+Processing by Api::V1::PlacesController#destroy as JSON
+  Parameters: {"object Object"=>nil, "id"=>"5217f9320e88504a00000002"}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>nil}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6468ms)
+Completed 404 Not Found in 2ms
+
+Mongoid::Errors::DocumentNotFound (
+Problem:
+  Document not found for class User with attributes {:authentication_token=>nil}.
+Summary:
+  When calling User.find_by with a hash of attributes, all attributes provided must match a document in the database or this error will be raised.
+Resolution:
+  Search for attributes that are in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error.):
+  app/controllers/api/v1/api_controller.rb:6:in `verify_user'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.5ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-25 19:38:32 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7198ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.9761ms)
+Completed 200 OK in 10ms (Views: 0.2ms)
+
+
+Started DELETE "/api/v1/places/5217f9320e88504a00000002" for 127.0.0.1 at 2013-08-25 19:38:34 -0700
+Processing by Api::V1::PlacesController#destroy as JSON
+  Parameters: {"object Object"=>nil, "id"=>"5217f9320e88504a00000002"}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>nil}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5009ms)
+Completed 404 Not Found in 2ms
+
+Mongoid::Errors::DocumentNotFound (
+Problem:
+  Document not found for class User with attributes {:authentication_token=>nil}.
+Summary:
+  When calling User.find_by with a hash of attributes, all attributes provided must match a document in the database or this error will be raised.
+Resolution:
+  Search for attributes that are in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error.):
+  app/controllers/api/v1/api_controller.rb:6:in `verify_user'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.4ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-25 19:39:19 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.9131ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.4558ms)
+Completed 200 OK in 11ms (Views: 0.1ms)
+
+
+Started DELETE "/api/v1/places/521779460e8850688700006f" for 127.0.0.1 at 2013-08-25 19:39:28 -0700
+Processing by Api::V1::PlacesController#destroy as JSON
+  Parameters: {"object Object"=>nil, "id"=>"521779460e8850688700006f"}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>nil}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3788ms)
+Completed 404 Not Found in 2ms
+
+Mongoid::Errors::DocumentNotFound (
+Problem:
+  Document not found for class User with attributes {:authentication_token=>nil}.
+Summary:
+  When calling User.find_by with a hash of attributes, all attributes provided must match a document in the database or this error will be raised.
+Resolution:
+  Search for attributes that are in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error.):
+  app/controllers/api/v1/api_controller.rb:6:in `verify_user'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.9ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-25 19:41:18 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7610ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.3101ms)
+Completed 200 OK in 11ms (Views: 0.2ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-25 19:41:39 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.1742ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.4632ms)
+Completed 200 OK in 11ms (Views: 0.1ms)
+
+
+Started DELETE "/api/v1/places/5217fa5a0e88504a00000006" for 127.0.0.1 at 2013-08-25 19:41:41 -0700
+Processing by Api::V1::PlacesController#destroy as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj", "id"=>"5217fa5a0e88504a00000006"}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6218ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"_id"=>"5217fa5a0e88504a00000006"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (70.5879ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=radio_collar_development collection=places selector={"_id"=>"5217fa5a0e88504a00000006"} flags=[:remove_first] (0.2129ms)
+Completed 200 OK in 12031ms (Views: 0.3ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-25 19:41:53 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (4.5140ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.5180ms)
+Completed 200 OK in 13ms (Views: 0.1ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-25 19:42:06 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4270ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3903ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.6001ms)
+Completed 200 OK in 24ms (Views: 0.1ms)
+
+
+Started DELETE "/api/v1/places/5217fa620e88504a00000008" for 127.0.0.1 at 2013-08-25 19:42:08 -0700
+Processing by Api::V1::PlacesController#destroy as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj", "id"=>"5217fa620e88504a00000008"}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6154ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"_id"=>"5217fa620e88504a00000008"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3850ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=radio_collar_development collection=places selector={"_id"=>"5217fa620e88504a00000008"} flags=[:remove_first] (0.1190ms)
+Completed 200 OK in 4ms (Views: 0.3ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-25 19:42:14 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5250ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.1089ms)
+Completed 200 OK in 8ms (Views: 0.1ms)
