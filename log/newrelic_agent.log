@@ -380,3 +380,17 @@ Resolv::ResolvError: no address for collector.newrelic.com
 [08/25/13 19:20:27 -0700 Rick1.local (2821)] INFO : Installing Rails3 Error instrumentation
 [08/25/13 19:20:27 -0700 Rick1.local (2821)] INFO : Finished instrumentation
 [08/25/13 19:20:27 -0700 Rick1.local (2821)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present
+[08/29/13 19:57:12 -0700 rick1.hsl.dn42 (776)] ERROR : Unable to read configuration file : can't convert nil into String
+[08/29/13 19:57:12 -0700 rick1.hsl.dn42 (776)] INFO : Starting the New Relic Agent.
+[08/29/13 19:57:12 -0700 rick1.hsl.dn42 (776)] INFO : Environment: development
+[08/29/13 19:57:12 -0700 rick1.hsl.dn42 (776)] INFO : Dispatcher: thin
+[08/29/13 19:57:12 -0700 rick1.hsl.dn42 (776)] INFO : Application: development
+[08/29/13 19:57:12 -0700 rick1.hsl.dn42 (776)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'development'
+[08/29/13 19:57:12 -0700 rick1.hsl.dn42 (776)] INFO : Installing DelayedJob instrumentation hooks
+[08/29/13 19:57:12 -0700 rick1.hsl.dn42 (776)] INFO : Installing DelayedJob instrumentation
+[08/29/13 19:57:12 -0700 rick1.hsl.dn42 (776)] INFO : Installing Net instrumentation
+[08/29/13 19:57:12 -0700 rick1.hsl.dn42 (776)] INFO : Installing Rails 3 Controller instrumentation
+[08/29/13 19:57:12 -0700 rick1.hsl.dn42 (776)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[08/29/13 19:57:12 -0700 rick1.hsl.dn42 (776)] INFO : Installing Rails3 Error instrumentation
+[08/29/13 19:57:12 -0700 rick1.hsl.dn42 (776)] INFO : Finished instrumentation
+[08/29/13 19:57:12 -0700 rick1.hsl.dn42 (776)] INFO : NewRelic::Agent::Samplers::DelayedJobSampler sampler not available: No DJ worker present

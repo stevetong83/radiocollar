@@ -4232,3 +4232,310 @@ Processing by Api::V1::PlacesController#index as JSON
   MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5250ms)
   MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.1089ms)
 Completed 200 OK in 8ms (Views: 0.1ms)
+
+
+Started DELETE "/api/v1/places/5217f93f0e88504a00000004" for 127.0.0.1 at 2013-08-25 20:06:51 -0700
+Processing by Api::V1::PlacesController#destroy as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj", "id"=>"5217f93f0e88504a00000004"}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4179ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4122ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"_id"=>"5217f93f0e88504a00000004"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3419ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=radio_collar_development collection=places selector={"_id"=>"5217f93f0e88504a00000004"} flags=[:remove_first] (0.0670ms)
+Completed 200 OK in 3ms (Views: 0.2ms)
+
+
+Started DELETE "/api/v1/places/52177ebc0e88506887000075" for 127.0.0.1 at 2013-08-25 20:06:52 -0700
+Processing by Api::V1::PlacesController#destroy as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj", "id"=>"52177ebc0e88506887000075"}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5510ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"_id"=>"52177ebc0e88506887000075"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3951ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=radio_collar_development collection=places selector={"_id"=>"52177ebc0e88506887000075"} flags=[:remove_first] (0.1180ms)
+Completed 200 OK in 3ms (Views: 0.2ms)
+
+
+Started DELETE "/api/v1/places/5217794e0e88506887000071" for 127.0.0.1 at 2013-08-25 20:06:53 -0700
+Processing by Api::V1::PlacesController#destroy as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj", "id"=>"5217794e0e88506887000071"}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6180ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"_id"=>"5217794e0e88506887000071"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3550ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=radio_collar_development collection=places selector={"_id"=>"5217794e0e88506887000071"} flags=[:remove_first] (0.0629ms)
+Completed 200 OK in 3ms (Views: 0.2ms)
+
+
+Started DELETE "/api/v1/places/521779460e8850688700006f" for 127.0.0.1 at 2013-08-25 20:06:55 -0700
+Processing by Api::V1::PlacesController#destroy as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj", "id"=>"521779460e8850688700006f"}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6857ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"_id"=>"521779460e8850688700006f"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2511ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=radio_collar_development collection=places selector={"_id"=>"521779460e8850688700006f"} flags=[:remove_first] (0.0608ms)
+Completed 200 OK in 3ms (Views: 0.1ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-28 07:11:29 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (172.9271ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.8212ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (77.8549ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.1469ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (4.3311ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (14.9779ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (24.5268ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (4.2896ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (14.3223ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (8.7340ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (14.8129ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.8869ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (14.7209ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (13.5009ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (32.8262ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (36.0441ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.4659ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (31.5950ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (4.0591ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.6030ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (4.4858ms)
+Completed 500 Internal Server Error in 5573ms
+
+Moped::Errors::ConnectionFailure (Could not connect to any secondary or primary nodes for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>):
+  app/controllers/api/v1/api_controller.rb:6:in `verify_user'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (28.1ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (695.9ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-29 19:57:58 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7023ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0409ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.8141ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.8479ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.8501ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0418ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.7769ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.8672ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.3622ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.9361ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.9428ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.9693ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.8961ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.0987ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.9769ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.2120ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.8601ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (33.0062ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.3461ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.3322ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.8689ms)
+Completed 500 Internal Server Error in 5361ms
+
+Moped::Errors::ConnectionFailure (Could not connect to any secondary or primary nodes for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>):
+  app/controllers/api/v1/api_controller.rb:6:in `verify_user'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.9ms)
+
+
+Started POST "/api/v1/places" for 127.0.0.1 at 2013-08-29 19:58:04 -0700
+Processing by Api::V1::PlacesController#create as JSON
+  Parameters: {"lat"=>33.415416199999996, "long"=>-111.8355941, "name"=>"Hello?", "authentication_token"=>"7LG1q3X6onCSbzGesFcj", "place"=>{"name"=>"Hello?", "lat"=>33.415416199999996, "long"=>-111.8355941}}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.6488ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.6879ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.6567ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.4111ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.7111ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.5301ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.9178ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (30.3707ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.6770ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.5062ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.7268ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.7421ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.9099ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.7840ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.0003ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.4362ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.8188ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.1180ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.8827ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.4340ms)
+Completed 500 Internal Server Error in 5112ms
+
+Moped::Errors::ConnectionFailure (Could not connect to any secondary or primary nodes for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>):
+  app/controllers/api/v1/api_controller.rb:6:in `verify_user'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.5ms)
+
+
+Started POST "/api/v1/places" for 127.0.0.1 at 2013-08-29 19:58:09 -0700
+Processing by Api::V1::PlacesController#create as JSON
+  Parameters: {"lat"=>33.415416199999996, "long"=>-111.8355941, "name"=>"One two three.", "authentication_token"=>"7LG1q3X6onCSbzGesFcj", "place"=>{"name"=>"One two three.", "lat"=>33.415416199999996, "long"=>-111.8355941}}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.7299ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8651ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.2290ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.1241ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0220ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.8482ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.6951ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.2330ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (33.8740ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.1288ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0051ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.0868ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.7899ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.3072ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0449ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.9131ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.4729ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.1889ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.2058ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.1479ms)
+Completed 500 Internal Server Error in 5104ms
+
+Moped::Errors::ConnectionFailure (Could not connect to any secondary or primary nodes for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>):
+  app/controllers/api/v1/api_controller.rb:6:in `verify_user'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.6ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-29 19:58:14 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.1272ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.2011ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.6320ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4129ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0359ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.4920ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.9380ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.7133ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.6262ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (37.4401ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.5868ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.8539ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.3100ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0049ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.0110ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.3622ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.4419ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.5327ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.9018ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (3.0780ms)
+Completed 500 Internal Server Error in 5110ms
+
+Moped::Errors::ConnectionFailure (Could not connect to any secondary or primary nodes for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>):
+  app/controllers/api/v1/api_controller.rb:6:in `verify_user'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.6ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-29 19:58:30 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0139ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (314.6901ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (2.6829ms)
+Completed 200 OK in 603ms (Views: 0.2ms)
+
+
+Started DELETE "/api/v1/places/5217abbe0e8850b3bc000002" for 127.0.0.1 at 2013-08-29 19:58:35 -0700
+Processing by Api::V1::PlacesController#destroy as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj", "id"=>"5217abbe0e8850b3bc000002"}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6783ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"_id"=>"5217abbe0e8850b3bc000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (1.4391ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=radio_collar_development collection=places selector={"_id"=>"5217abbe0e8850b3bc000002"} flags=[:remove_first] (0.1490ms)
+Completed 200 OK in 6ms (Views: 0.2ms)
+
+
+Started DELETE "/api/v1/places/5217f9320e88504a00000002" for 127.0.0.1 at 2013-08-29 19:58:36 -0700
+Processing by Api::V1::PlacesController#destroy as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj", "id"=>"5217f9320e88504a00000002"}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5341ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"_id"=>"5217f9320e88504a00000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4201ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=radio_collar_development collection=places selector={"_id"=>"5217f9320e88504a00000002"} flags=[:remove_first] (0.0780ms)
+Completed 200 OK in 3ms (Views: 0.1ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-29 19:58:37 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5782ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4718ms)
+Completed 200 OK in 4ms (Views: 0.1ms)
+
+
+Started GET "/~i" for 127.0.0.1 at 2013-08-29 19:58:48 -0700
+Processing by MongoidShortener::ShortenedUrlsController#translate as HTML
+  Parameters: {"unique_key"=>"~i"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={"$query"=>{"unique_key"=>"i"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.2019ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={"_id"=>"521779550e88506887000072"} update={"$inc"=>{"use_count"=>1}} flags=[] (0.1411ms)
+Completed 301 Moved Permanently in 3ms
+
+
+Started POST "/api/v1/places" for 127.0.0.1 at 2013-08-29 19:59:07 -0700
+Processing by Api::V1::PlacesController#create as JSON
+  Parameters: {"lat"=>33.415419199999995, "long"=>-111.8355849, "name"=>"Hi brett yo yo", "authentication_token"=>"7LG1q3X6onCSbzGesFcj", "place"=>{"name"=>"Hi brett yo yo", "lat"=>33.415419199999995, "long"=>-111.8355849}}
+WARNING: Can't verify CSRF token authenticity
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5512ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={"$query"=>{"url"=>"http://maps.google.com/maps?q=33.415419199999995,+-111.8355849+(Hi brett yo yo)"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3471ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=radio_collar_development command={:count=>"mongoid_shortener_shortened_urls", :query=>{}} (0.3450ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={"$query"=>{"unique_key"=>"p"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3252ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={:url=>"http://maps.google.com/maps?q=33.415419199999995,+-111.8355849+(Hi brett yo yo)"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.3707ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={:unique_key=>"p"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.2520ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=radio_collar_development collection=mongoid_shortener_shortened_urls documents=[{"_id"=>"52200a7b5e753f97fe000001", "use_count"=>0, "url"=>"http://maps.google.com/maps?q=33.415419199999995,+-111.8355849+(Hi brett yo yo)", "unique_key"=>"p", "updated_at"=>2013-08-30 02:59:07 UTC, "created_at"=>2013-08-30 02:59:07 UTC}] flags=[] (0.1552ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=radio_collar_development collection=places documents=[{"_id"=>"52200a7b5e753f97fe000002", "name"=>"Hi brett yo yo", "lat"=>33.415419199999995, "long"=>-111.8355849, "location_url"=>"http://localhost:3000/~p", "user_id"=>"5216ee0b0e8850f148000001", "updated_at"=>2013-08-30 02:59:07 UTC, "created_at"=>2013-08-30 02:59:07 UTC}] flags=[] (0.1321ms)
+Completed 200 OK in 11ms (Views: 0.1ms)
+
+
+Started GET "/~f" for 127.0.0.1 at 2013-08-29 19:59:09 -0700
+Processing by MongoidShortener::ShortenedUrlsController#translate as HTML
+  Parameters: {"unique_key"=>"~f"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={"$query"=>{"unique_key"=>"f"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5810ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={"_id"=>"5217793b0e8850688700006c"} update={"$inc"=>{"use_count"=>1}} flags=[] (0.1872ms)
+Completed 301 Moved Permanently in 2ms
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-29 19:59:13 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6781ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4253ms)
+Completed 200 OK in 5ms (Views: 0.2ms)
+
+
+Started GET "/~p" for 127.0.0.1 at 2013-08-29 19:59:14 -0700
+Processing by MongoidShortener::ShortenedUrlsController#translate as HTML
+  Parameters: {"unique_key"=>"~p"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={"$query"=>{"unique_key"=>"p"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6881ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={"_id"=>"52200a7b5e753f97fe000001"} update={"$inc"=>{"use_count"=>1}} flags=[] (0.1903ms)
+Completed 301 Moved Permanently in 3ms
+
+
+Started GET "/~f" for 127.0.0.1 at 2013-08-29 19:59:56 -0700
+Processing by MongoidShortener::ShortenedUrlsController#translate as HTML
+  Parameters: {"unique_key"=>"~f"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={"$query"=>{"unique_key"=>"f"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6168ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={"_id"=>"5217793b0e8850688700006c"} update={"$inc"=>{"use_count"=>1}} flags=[] (0.1261ms)
+Completed 301 Moved Permanently in 2ms

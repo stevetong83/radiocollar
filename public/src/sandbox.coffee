@@ -2,10 +2,12 @@
 console.log 'dont forget to change the @server_url to production.'
 Backbone.Model.idAttribute = "_id"
 
-
 class window.Session extends Backbone.Model
   url: server_url + '/sessions'
+
 class window.SessionView extends Backbone.View
+  #This is wrong. el is supposed to be a string which represents
+  # an HTML tag that wraps the body of the view
   el: $('#content')
   initialize: ->
     @template = """
@@ -28,13 +30,11 @@ class window.SessionView extends Backbone.View
   ohNo: ->
     $('#go').text("#{++@attempts} failed login attempts. Try again.")
   authenticate: ->
+    #Why do I need to call the callbacks like that?
     @model.save {email: $('#email').val(), password: $('#password').val()}, {success: ( => @proceed()) , error: ( => @ohNo())}
 
-
-
-
-
 class window.Place extends Backbone.Model
+  idAttribute: "_id"
   initialize: () ->
     @set('lat', compass.lat)
     @set('long', compass.long)
@@ -46,51 +46,61 @@ class window.Place extends Backbone.Model
       return (alert "Unable to fix GPS location.")
     unless @get('name')?
       return (alert "A name is required.")
-  url: server_url + '/places'
+  #May need to change this one to "/places/#{@_id}" when I try to edit stuff.
+  # url: server_url + '/places'
+  urlRoot: server_url + '/places'
+
 class window.Places extends Backbone.Collection
   url: server_url + '/places'
   model: Place
 
 class window.PlaceView extends Backbone.View
-  tagName: 'li'
-  el: 'ul#places'
-  initialize: (place) =>
-    @model = place
-    _.bindAll this, "render", "remove"
-    @model.bind "change", @render
-    @model.bind "destroy", @remove
+  tagName:  'li'
+  initialize: ->
+    @model.view = this if @model
+    #What's going on here??
+    @template = -> templayed('<a href="{{location_url}}">{{name}}</a><span class="destroy">[X]</span>')(@model.attributes)
     @render()
-  events: ->
-    "click .destroy" : "removePlace"
-  removePlace: ->
-    @model.destroy()
-  template: '<a href="{{location_url}}">{{name}}</a><span class="destroy">[X]</span>'
   render: =>
-    $(@el).append templayed(@template)(@model.attributes)
+    @$el.html(@template())
+    this
+  events:
+    "click .destroy"  : "erase"
+  erase: =>
+    #@model.destroy {data: {authentication_token: localStorage.auth_token}, success: ( => $(@el).remove())}
+    @model.destroy {data: {authentication_token: localStorage.auth_token}, processData: yes}
+    # @model.destroy success: ( -> $(@el).remove())
 
 class window.PlacesView extends Backbone.View
-  el:      $('#content')
+  tagName: 'ul'
   initialize: ->
     @collection = new Places()
-    $(@el).html """
-      <div><a href="/#logout">[Logout]</a></div>
-      <input id="new-place" placeholder="Name you waypoint">
-      <ul id='places'></ul>
-      """
     @collection.on('add remove reset sort', (=> @render()))
     @collection.fetch
       data: {authentication_token: localStorage.auth_token}
       success: ( => @render())
-    _.bindAll this, "render"
-  @template = _.template($("#ideas-template").html())
-  @collection.bind "reset", @render
-  @collection.bind "change", @render
-  events: ->
-    "keypress #new-place" : "createOnEnter"
+  events:
+    #Nothing yet.
+    {}
   render: =>
-    $('#places').html('')
+    #See if you can skip this line and just empty the whole div.
+    @$el.empty()
+    $('#content').empty()
     for place in @collection.models
-      new PlaceView(place)
+      view = new PlaceView(model: place)
+      view.$el.appendTo(this.$el)
+    @$el.appendTo('#content')
+
+class CreatePlacesView extends Backbone.View
+  initialize: ->
+    @$el.html('<a href="/#logout">[Logout]</a><input id="new-place" placeholder="Name you waypoint">')
+    @$el.appendTo('nav')
+  events:
+    "keypress #new-place" : "createOnEnter"
+  createOnEnter: (event) =>
+    if event.keyCode is 13
+      @makePlace()
+      $('#new-place').val('')
   makePlace: () ->
     model = new Place()
     model.set
@@ -99,27 +109,13 @@ class window.PlacesView extends Backbone.View
       long : compass.long
     model.save({authentication_token: localStorage.auth_token})
     @collection.add(model)
-  createOnEnter: (event) =>
-    if event.keyCode is 13
-      @makePlace()
-      #probably a better way of doing this...
-      $('#new-place').val('')
-
-
-
-
-
-
-
-
-
 
 class window.RadioCollarRouter extends Backbone.Router
   routes:
-    ""      : "login"
+    ""      : "home"
     "main"  : "main"
     "logout": "logout"
-  login: ->
+  home: ->
     if localStorage.auth_token?
       return App.navigate('/main', trigger: yes)
     else
@@ -129,18 +125,20 @@ class window.RadioCollarRouter extends Backbone.Router
       return App.navigate('/', trigger: yes)
     $('#content').empty()
     window.placesView = new PlacesView
+    new CreatePlacesView(collection: placesView.collection)
   logout: ->
     delete localStorage.auth_token
     return App.navigate('/', trigger: yes)
-
 $ ->
   window.App = new RadioCollarRouter()
   Backbone.history.start()
 
+
 ##REFACTOR:
-# - Take as much stuff out of the $ -> as possible.
 # - Stop calling localStorage.auth_token. Use the model itself. Or store the model in local storage. Or everything in localstorage
-# - Asign relevant DOM attributes to view attributes. Stop calling DOM directly so much.
+# - Add the authtoken to the API URL
 # - Get rid of all the global vars when you're done hacking. If I must has globals, put them into the App namespace
-# - A lot of views are using @el but they should actually be using @$el()
 # - Add a refresh button
+# - Put everything into an App namespace
+# - We might have a memory leak or something. Why are parameters sent two times in the same request?
+#   https://www.youtube.com/watch?v=hb8_IReoms8
