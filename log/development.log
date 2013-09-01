@@ -5064,3 +5064,886 @@ Processing by Api::V1::PlacesController#index as JSON
   MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4890ms)
   MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3641ms)
 Completed 200 OK in 2ms (Views: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-31 21:11:13 -0700
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.haml within layouts/application (5.6ms)
+Compiled application.css  (1ms)  (pid 4285)
+Completed 500 Internal Server Error in 236ms
+
+ActionView::Template::Error (couldn't find file 'turbolinks'
+  (in /Users/ricardocarlino/Documents/coding/radiocollar/app/assets/javascripts/application.js:15)):
+    3: <head>
+    4:   <title>RadioCollarBackend</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__2732580834782453151_70313293537780'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (29.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-31 21:11:14 -0700
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.haml within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (couldn't find file 'turbolinks'
+  (in /Users/ricardocarlino/Documents/coding/radiocollar/app/assets/javascripts/application.js:15)):
+    3: <head>
+    4:   <title>RadioCollarBackend</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__2732580834782453151_70313293537780'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-31 21:14:41 -0700
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.haml within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (couldn't find file 'underscore'
+  (in /Users/ricardocarlino/Documents/coding/radiocollar/app/assets/javascripts/application.js:15)):
+    3: <head>
+    4:   <title>RadioCollarBackend</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__2732580834782453151_70313293537780'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-31 21:14:41 -0700
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.haml within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 42ms
+
+ActionView::Template::Error (couldn't find file 'underscore'
+  (in /Users/ricardocarlino/Documents/coding/radiocollar/app/assets/javascripts/application.js:15)):
+    3: <head>
+    4:   <title>RadioCollarBackend</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__2732580834782453151_70313293537780'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-31 21:15:44 -0700
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.haml within layouts/application (3.9ms)
+Compiled underscore.js  (0ms)  (pid 4323)
+Compiled backbone.js  (0ms)  (pid 4323)
+Compiled radiocollar.js  (275ms)  (pid 4323)
+Compiled places/index.js  (185ms)  (pid 4323)
+Compiled models/place.js  (161ms)  (pid 4323)
+Compiled models/session.js  (149ms)  (pid 4323)
+Compiled collections/places.js  (151ms)  (pid 4323)
+Compiled views/places/create_places.js  (165ms)  (pid 4323)
+Compiled views/places/place.js  (156ms)  (pid 4323)
+Compiled views/places/places.js  (164ms)  (pid 4323)
+Compiled views/sessions/session.js  (166ms)  (pid 4323)
+Compiled routers/main_router.js  (174ms)  (pid 4323)
+Compiled compass.js  (166ms)  (pid 4323)
+Compiled templayed.js  (0ms)  (pid 4323)
+Compiled application.js  (2154ms)  (pid 4323)
+Completed 200 OK in 2254ms (Views: 2253.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-31 21:15:46 -0700
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-31 21:15:46 -0700
+Served asset /jquery.js - 200 OK (36ms)
+
+
+Started GET "/assets/places/index.js?body=1" for 127.0.0.1 at 2013-08-31 21:15:46 -0700
+Served asset /places/index.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-31 21:15:46 -0700
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2013-08-31 21:15:46 -0700
+Served asset /underscore.js - 200 OK (1ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2013-08-31 21:15:46 -0700
+Served asset /backbone.js - 200 OK (1ms)
+
+
+Started GET "/assets/radiocollar.js?body=1" for 127.0.0.1 at 2013-08-31 21:15:46 -0700
+Served asset /radiocollar.js - 200 OK (1ms)
+
+
+Started GET "/assets/models/session.js?body=1" for 127.0.0.1 at 2013-08-31 21:15:46 -0700
+Served asset /models/session.js - 200 OK (2ms)
+
+
+Started GET "/assets/models/place.js?body=1" for 127.0.0.1 at 2013-08-31 21:15:46 -0700
+Served asset /models/place.js - 200 OK (2ms)
+
+
+Started GET "/assets/collections/places.js?body=1" for 127.0.0.1 at 2013-08-31 21:15:46 -0700
+Served asset /collections/places.js - 200 OK (2ms)
+
+
+Started GET "/assets/views/places/place.js?body=1" for 127.0.0.1 at 2013-08-31 21:15:46 -0700
+Served asset /views/places/place.js - 200 OK (1ms)
+
+
+Started GET "/assets/views/places/create_places.js?body=1" for 127.0.0.1 at 2013-08-31 21:15:46 -0700
+Served asset /views/places/create_places.js - 200 OK (1ms)
+
+
+Started GET "/assets/views/places/places.js?body=1" for 127.0.0.1 at 2013-08-31 21:15:46 -0700
+Served asset /views/places/places.js - 200 OK (1ms)
+
+
+Started GET "/assets/compass.js?body=1" for 127.0.0.1 at 2013-08-31 21:15:46 -0700
+Served asset /compass.js - 200 OK (1ms)
+
+
+Started GET "/assets/routers/main_router.js?body=1" for 127.0.0.1 at 2013-08-31 21:15:46 -0700
+Served asset /routers/main_router.js - 200 OK (1ms)
+
+
+Started GET "/assets/views/sessions/session.js?body=1" for 127.0.0.1 at 2013-08-31 21:15:46 -0700
+Served asset /views/sessions/session.js - 200 OK (1ms)
+
+
+Started GET "/assets/templayed.js?body=1" for 127.0.0.1 at 2013-08-31 21:15:46 -0700
+Served asset /templayed.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-31 21:15:46 -0700
+Served asset /application.js - 200 OK (21ms)
+
+
+Started GET "/api/v1/places?authentication_token=t49NqieVzn3qvCgcEtU2" for 127.0.0.1 at 2013-08-31 21:15:46 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"t49NqieVzn3qvCgcEtU2"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9532ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"t49NqieVzn3qvCgcEtU2"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (287.1847ms)
+Completed 404 Not Found in 665ms
+
+Mongoid::Errors::DocumentNotFound (
+Problem:
+  Document not found for class User with attributes {:authentication_token=>"t49NqieVzn3qvCgcEtU2"}.
+Summary:
+  When calling User.find_by with a hash of attributes, all attributes provided must match a document in the database or this error will be raised.
+Resolution:
+  Search for attributes that are in the database or set the Mongoid.raise_not_found_error configuration option to false, which will cause a nil to be returned instead of raising this error.):
+  app/controllers/api/v1/api_controller.rb:6:in `verify_user'
+
+
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/ricardocarlino/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-31 21:16:10 -0700
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 35ms (Views: 34.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-31 21:16:10 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:10 -0700
+Served asset /underscore.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:10 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:10 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:10 -0700
+Served asset /backbone.js - 200 OK (0ms)
+
+
+Started GET "/assets/places/index.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:10 -0700
+Served asset /places/index.js - 200 OK (0ms)
+
+
+Started GET "/assets/radiocollar.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:10 -0700
+Served asset /radiocollar.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/place.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:10 -0700
+Served asset /models/place.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/places/create_places.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:10 -0700
+Served asset /views/places/create_places.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/session.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:10 -0700
+Served asset /models/session.js - 200 OK (0ms)
+
+
+Started GET "/assets/collections/places.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:10 -0700
+Served asset /collections/places.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/places/place.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:10 -0700
+Served asset /views/places/place.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/places/places.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:10 -0700
+Served asset /views/places/places.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/sessions/session.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:10 -0700
+Served asset /views/sessions/session.js - 200 OK (0ms)
+
+
+Started GET "/assets/routers/main_router.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:10 -0700
+Served asset /routers/main_router.js - 200 OK (0ms)
+
+
+Started GET "/assets/compass.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:10 -0700
+Served asset /compass.js - 200 OK (0ms)
+
+
+Started GET "/assets/templayed.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:10 -0700
+Served asset /templayed.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:10 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 37ms (Views: 36.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /backbone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/radiocollar.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /radiocollar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places/index.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /places/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/place.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /models/place.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/session.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /models/session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/collections/places.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /collections/places.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/places/create_places.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /views/places/create_places.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/places/place.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /views/places/place.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/places/places.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /views/places/places.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/sessions/session.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /views/sessions/session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routers/main_router.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /routers/main_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compass.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /compass.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templayed.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /templayed.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 71ms (Views: 71.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /backbone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/radiocollar.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /radiocollar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places/index.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /places/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/place.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /models/place.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/session.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /models/session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/collections/places.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /collections/places.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/places/create_places.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /views/places/create_places.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/places/place.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /views/places/place.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/places/places.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /views/places/places.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/sessions/session.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /views/sessions/session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routers/main_router.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /routers/main_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compass.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /compass.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templayed.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /templayed.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-31 21:16:11 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-31 21:17:16 -0700
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 35ms (Views: 35.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-31 21:17:17 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-31 21:17:17 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-31 21:17:17 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2013-08-31 21:17:17 -0700
+Served asset /underscore.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2013-08-31 21:17:17 -0700
+Served asset /backbone.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/radiocollar.js?body=1" for 127.0.0.1 at 2013-08-31 21:17:17 -0700
+Served asset /radiocollar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/places/index.js?body=1" for 127.0.0.1 at 2013-08-31 21:17:17 -0700
+Served asset /places/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/place.js?body=1" for 127.0.0.1 at 2013-08-31 21:17:17 -0700
+Served asset /models/place.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/session.js?body=1" for 127.0.0.1 at 2013-08-31 21:17:17 -0700
+Served asset /models/session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/collections/places.js?body=1" for 127.0.0.1 at 2013-08-31 21:17:17 -0700
+Served asset /collections/places.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/places/create_places.js?body=1" for 127.0.0.1 at 2013-08-31 21:17:17 -0700
+Served asset /views/places/create_places.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/places/place.js?body=1" for 127.0.0.1 at 2013-08-31 21:17:17 -0700
+Served asset /views/places/place.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/places/places.js?body=1" for 127.0.0.1 at 2013-08-31 21:17:17 -0700
+Served asset /views/places/places.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/sessions/session.js?body=1" for 127.0.0.1 at 2013-08-31 21:17:17 -0700
+Served asset /views/sessions/session.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/routers/main_router.js?body=1" for 127.0.0.1 at 2013-08-31 21:17:17 -0700
+Served asset /routers/main_router.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/compass.js?body=1" for 127.0.0.1 at 2013-08-31 21:17:17 -0700
+Served asset /compass.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/templayed.js?body=1" for 127.0.0.1 at 2013-08-31 21:17:17 -0700
+Served asset /templayed.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-31 21:17:17 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-31 21:18:28 -0700
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 36ms (Views: 36.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-31 21:18:28 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-31 21:18:28 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-31 21:18:28 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/places/index.js?body=1" for 127.0.0.1 at 2013-08-31 21:18:29 -0700
+Served asset /places/index.js - 200 OK (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2013-08-31 21:18:29 -0700
+Served asset /underscore.js - 200 OK (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2013-08-31 21:18:29 -0700
+Served asset /backbone.js - 200 OK (0ms)
+
+
+Started GET "/assets/radiocollar.js?body=1" for 127.0.0.1 at 2013-08-31 21:18:29 -0700
+Served asset /radiocollar.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/place.js?body=1" for 127.0.0.1 at 2013-08-31 21:18:29 -0700
+Served asset /models/place.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/session.js?body=1" for 127.0.0.1 at 2013-08-31 21:18:29 -0700
+Served asset /models/session.js - 200 OK (0ms)
+
+
+Started GET "/assets/collections/places.js?body=1" for 127.0.0.1 at 2013-08-31 21:18:29 -0700
+Served asset /collections/places.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/places/create_places.js?body=1" for 127.0.0.1 at 2013-08-31 21:18:29 -0700
+Served asset /views/places/create_places.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/places/place.js?body=1" for 127.0.0.1 at 2013-08-31 21:18:29 -0700
+Served asset /views/places/place.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/places/places.js?body=1" for 127.0.0.1 at 2013-08-31 21:18:29 -0700
+Served asset /views/places/places.js - 200 OK (0ms)
+
+
+Started GET "/assets/routers/main_router.js?body=1" for 127.0.0.1 at 2013-08-31 21:18:29 -0700
+Served asset /routers/main_router.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/sessions/session.js?body=1" for 127.0.0.1 at 2013-08-31 21:18:29 -0700
+Served asset /views/sessions/session.js - 200 OK (0ms)
+
+
+Started GET "/assets/templayed.js?body=1" for 127.0.0.1 at 2013-08-31 21:18:29 -0700
+Served asset /templayed.js - 200 OK (0ms)
+
+
+Started GET "/assets/compass.js?body=1" for 127.0.0.1 at 2013-08-31 21:18:29 -0700
+Served asset /compass.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-31 21:18:29 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2013-08-31 21:18:37 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"email"=>"test@test.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9561ms)
+Completed 401 Unauthorized in 102ms (Views: 0.3ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9429ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4301ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8600ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=radio_collar_development collection=users selector={"_id"=>"5216ee0b0e8850f148000001"} update={"$set"=>{"encrypted_password"=>"$2a$10$vs2l69bXmWj4GCJsf6cufOFGnN6Nh8chn9OFwMvxe9mnLsRxO8vzu", "updated_at"=>2013-09-01 04:24:04 UTC}} flags=[] (0.4091ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2013-08-31 21:24:07 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (2.0454ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"email"=>"test@test.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.9851ms)
+Completed 401 Unauthorized in 92ms (Views: 0.3ms)
+
+
+Started POST "/api/v1/sessions" for 127.0.0.1 at 2013-08-31 21:24:13 -0700
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"email"=>"test@test.com", "password"=>"[FILTERED]", "session"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"email"=>"test@test.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5159ms)
+Completed 200 OK in 84ms (Views: 0.2ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-31 21:24:13 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5660ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (77.2212ms)
+Completed 200 OK in 115ms (Views: 0.2ms)
+
+
+Started POST "/api/v1/places" for 127.0.0.1 at 2013-08-31 21:24:20 -0700
+Processing by Api::V1::PlacesController#create as JSON
+  Parameters: {"lat"=>33.6968099, "long"=>-112.12699149999999, "name"=>"Hi?", "authentication_token"=>"7LG1q3X6onCSbzGesFcj", "place"=>{"name"=>"Hi?", "lat"=>33.6968099, "long"=>-112.12699149999999}}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6459ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={"$query"=>{"url"=>"http://maps.google.com/maps?q=33.6968099,+-112.12699149999999+(Hi?)"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (19.0032ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=radio_collar_development command={:count=>"mongoid_shortener_shortened_urls", :query=>{}} (0.7601ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={"$query"=>{"unique_key"=>"t"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7203ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={:url=>"http://maps.google.com/maps?q=33.6968099,+-112.12699149999999+(Hi?)"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.5381ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={:unique_key=>"t"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.4239ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=radio_collar_development collection=mongoid_shortener_shortened_urls documents=[{"_id"=>"5222c1740e885086ff000001", "use_count"=>0, "url"=>"http://maps.google.com/maps?q=33.6968099,+-112.12699149999999+(Hi?)", "unique_key"=>"t", "updated_at"=>2013-09-01 04:24:20 UTC, "created_at"=>2013-09-01 04:24:20 UTC}] flags=[] (0.2220ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=radio_collar_development collection=places documents=[{"_id"=>"5222c1740e885086ff000002", "name"=>"Hi?", "lat"=>33.6968099, "long"=>-112.12699149999999, "location_url"=>"http://localhost:3000/~t", "user_id"=>"5216ee0b0e8850f148000001", "updated_at"=>2013-09-01 04:24:20 UTC, "created_at"=>2013-09-01 04:24:20 UTC}] flags=[] (0.1500ms)
+Completed 200 OK in 75ms (Views: 0.2ms)
+
+
+Started DELETE "/api/v1/places/5222c1740e885086ff000002" for 127.0.0.1 at 2013-08-31 21:24:22 -0700
+Processing by Api::V1::PlacesController#destroy as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj", "id"=>"5222c1740e885086ff000002"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8192ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"_id"=>"5222c1740e885086ff000002"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5288ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=radio_collar_development collection=places selector={"_id"=>"5222c1740e885086ff000002"} flags=[:remove_first] (0.1330ms)
+Completed 200 OK in 4ms (Views: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-31 21:24:24 -0700
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 67ms (Views: 67.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-31 21:24:24 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:24 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:24 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:24 -0700
+Served asset /underscore.js - 200 OK (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:24 -0700
+Served asset /backbone.js - 200 OK (0ms)
+
+
+Started GET "/assets/places/index.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:24 -0700
+Served asset /places/index.js - 200 OK (0ms)
+
+
+Started GET "/assets/radiocollar.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:24 -0700
+Served asset /radiocollar.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/place.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:24 -0700
+Served asset /models/place.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/session.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:24 -0700
+Served asset /models/session.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/places/place.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:24 -0700
+Served asset /views/places/place.js - 200 OK (0ms)
+
+
+Started GET "/assets/collections/places.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:24 -0700
+Served asset /collections/places.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/places/create_places.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:24 -0700
+Served asset /views/places/create_places.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/places/places.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:24 -0700
+Served asset /views/places/places.js - 200 OK (0ms)
+
+
+Started GET "/assets/routers/main_router.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:24 -0700
+Served asset /routers/main_router.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/sessions/session.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:24 -0700
+Served asset /views/sessions/session.js - 200 OK (0ms)
+
+
+Started GET "/assets/templayed.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:24 -0700
+Served asset /templayed.js - 200 OK (0ms)
+
+
+Started GET "/assets/compass.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:24 -0700
+Served asset /compass.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:24 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-31 21:24:24 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.5011ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4640ms)
+Completed 200 OK in 5ms (Views: 0.1ms)
+
+
+Started POST "/api/v1/places" for 127.0.0.1 at 2013-08-31 21:24:29 -0700
+Processing by Api::V1::PlacesController#create as JSON
+  Parameters: {"lat"=>33.6968143, "long"=>-112.12703570000001, "name"=>"Hello??????", "authentication_token"=>"7LG1q3X6onCSbzGesFcj", "place"=>{"name"=>"Hello??????", "lat"=>33.6968143, "long"=>-112.12703570000001}}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6428ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={"$query"=>{"url"=>"http://maps.google.com/maps?q=33.6968143,+-112.12703570000001+(Hello??????)"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5231ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=radio_collar_development command={:count=>"mongoid_shortener_shortened_urls", :query=>{}} (0.3018ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={"$query"=>{"unique_key"=>"u"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3622ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={:url=>"http://maps.google.com/maps?q=33.6968143,+-112.12703570000001+(Hello??????)"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.2069ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={:unique_key=>"u"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.2601ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=radio_collar_development collection=mongoid_shortener_shortened_urls documents=[{"_id"=>"5222c17d0e885086ff000003", "use_count"=>0, "url"=>"http://maps.google.com/maps?q=33.6968143,+-112.12703570000001+(Hello??????)", "unique_key"=>"u", "updated_at"=>2013-09-01 04:24:29 UTC, "created_at"=>2013-09-01 04:24:29 UTC}] flags=[] (0.1180ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=radio_collar_development collection=places documents=[{"_id"=>"5222c17d0e885086ff000004", "name"=>"Hello??????", "lat"=>33.6968143, "long"=>-112.12703570000001, "location_url"=>"http://localhost:3000/~u", "user_id"=>"5216ee0b0e8850f148000001", "updated_at"=>2013-09-01 04:24:29 UTC, "created_at"=>2013-09-01 04:24:29 UTC}] flags=[] (0.1769ms)
+Completed 200 OK in 9ms (Views: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-31 21:24:31 -0700
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 34ms (Views: 34.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-31 21:24:31 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:31 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:31 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:31 -0700
+Served asset /underscore.js - 200 OK (0ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:31 -0700
+Served asset /backbone.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/session.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:31 -0700
+Served asset /models/session.js - 200 OK (0ms)
+
+
+Started GET "/assets/places/index.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:31 -0700
+Served asset /places/index.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/place.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:31 -0700
+Served asset /models/place.js - 200 OK (0ms)
+
+
+Started GET "/assets/radiocollar.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:31 -0700
+Served asset /radiocollar.js - 200 OK (0ms)
+
+
+Started GET "/assets/collections/places.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:31 -0700
+Served asset /collections/places.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/places/create_places.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:31 -0700
+Served asset /views/places/create_places.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/places/place.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:31 -0700
+Served asset /views/places/place.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/places/places.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:31 -0700
+Served asset /views/places/places.js - 200 OK (0ms)
+
+
+Started GET "/assets/routers/main_router.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:31 -0700
+Served asset /routers/main_router.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/sessions/session.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:31 -0700
+Served asset /views/sessions/session.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:31 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/templayed.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:31 -0700
+Served asset /templayed.js - 200 OK (0ms)
+
+
+Started GET "/assets/compass.js?body=1" for 127.0.0.1 at 2013-08-31 21:24:31 -0700
+Served asset /compass.js - 200 OK (0ms)
+
+
+Started GET "/api/v1/places?authentication_token=7LG1q3X6onCSbzGesFcj" for 127.0.0.1 at 2013-08-31 21:24:31 -0700
+Processing by Api::V1::PlacesController#index as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.6341ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"user_id"=>"5216ee0b0e8850f148000001"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.5901ms)
+Completed 200 OK in 5ms (Views: 0.1ms)
+
+
+Started DELETE "/api/v1/places/5222c17d0e885086ff000004" for 127.0.0.1 at 2013-08-31 21:38:54 -0700
+Processing by Api::V1::PlacesController#destroy as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj", "id"=>"5222c17d0e885086ff000004"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.3829ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4411ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"_id"=>"5222c17d0e885086ff000004"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.4501ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=radio_collar_development collection=places selector={"_id"=>"5222c17d0e885086ff000004"} flags=[:remove_first] (0.1349ms)
+Completed 200 OK in 4ms (Views: 0.2ms)
+
+
+Started DELETE "/api/v1/places/52201cd95e753f97fe000008" for 127.0.0.1 at 2013-08-31 21:38:55 -0700
+Processing by Api::V1::PlacesController#destroy as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj", "id"=>"52201cd95e753f97fe000008"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5090ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"_id"=>"52201cd95e753f97fe000008"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.2391ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=radio_collar_development collection=places selector={"_id"=>"52201cd95e753f97fe000008"} flags=[:remove_first] (0.0668ms)
+Completed 200 OK in 2ms (Views: 0.2ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.8237ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=radio_collar_development command={:count=>"places", :query=>{}} (0.5200ms)
+
+
+Started POST "/api/v1/places" for 127.0.0.1 at 2013-08-31 21:39:10 -0700
+Processing by Api::V1::PlacesController#create as JSON
+  Parameters: {"lat"=>33.6968143, "long"=>-112.12703570000001, "name"=>"This is seriously wrong", "authentication_token"=>"7LG1q3X6onCSbzGesFcj", "place"=>{"name"=>"This is seriously wrong", "lat"=>33.6968143, "long"=>-112.12703570000001}}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5047ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={"$query"=>{"url"=>"http://maps.google.com/maps?q=33.6968143,+-112.12703570000001+(This is seriously wrong)"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3603ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=radio_collar_development command={:count=>"mongoid_shortener_shortened_urls", :query=>{}} (0.2799ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={"$query"=>{"unique_key"=>"v"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3450ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={:url=>"http://maps.google.com/maps?q=33.6968143,+-112.12703570000001+(This is seriously wrong)"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.2151ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=mongoid_shortener_shortened_urls selector={:unique_key=>"v"} flags=[] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.1888ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=radio_collar_development collection=mongoid_shortener_shortened_urls documents=[{"_id"=>"5222c4ee0e885086ff000005", "use_count"=>0, "url"=>"http://maps.google.com/maps?q=33.6968143,+-112.12703570000001+(This is seriously wrong)", "unique_key"=>"v", "updated_at"=>2013-09-01 04:39:10 UTC, "created_at"=>2013-09-01 04:39:10 UTC}] flags=[] (0.0908ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=radio_collar_development collection=places documents=[{"_id"=>"5222c4ee0e885086ff000006", "name"=>"This is seriously wrong", "lat"=>33.6968143, "long"=>-112.12703570000001, "location_url"=>"http://localhost:3000/~v", "user_id"=>"5216ee0b0e8850f148000001", "updated_at"=>2013-09-01 04:39:10 UTC, "created_at"=>2013-09-01 04:39:10 UTC}] flags=[] (0.0880ms)
+Completed 200 OK in 6ms (Views: 0.1ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=radio_collar_development command={:count=>"places", :query=>{}} (0.6678ms)
+
+
+Started DELETE "/api/v1/places/5222c4ee0e885086ff000006" for 127.0.0.1 at 2013-08-31 21:39:15 -0700
+Processing by Api::V1::PlacesController#destroy as JSON
+  Parameters: {"authentication_token"=>"7LG1q3X6onCSbzGesFcj", "id"=>"5222c4ee0e885086ff000006"}
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=users selector={"$query"=>{"authentication_token"=>"7LG1q3X6onCSbzGesFcj"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5870ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=radio_collar_development collection=places selector={"_id"=>"5222c4ee0e885086ff000006"} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.3111ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=radio_collar_development collection=places selector={"_id"=>"5222c4ee0e885086ff000006"} flags=[:remove_first] (0.0751ms)
+Completed 200 OK in 3ms (Views: 0.2ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=radio_collar_development command={:count=>"places", :query=>{}} (0.6840ms)

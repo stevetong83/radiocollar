@@ -11,3 +11,91 @@
  *= require_self
  *= require_tree .
  */
+
+ * {
+  -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+  /*-webkit-user-select: none;                  prevent copy paste, to allow, change 'none' to 'text' */
+
+}
+/**:not(input,textarea) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+*/
+/*BOILER CODE ABOVE REUSE THIS WHENEVER CHOO CHOOO*/
+
+body {
+  background: -webkit-linear-gradient(-45deg, rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); 
+  padding: 0;
+  margin: 0;
+  font-family: helvetica, arial, sans-serif;
+}
+
+
+#wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+
+header {
+/*  background: #1ABC9C;*/
+  max-height: 35px;
+/*  color: #2C3E50;*/
+  text-align: center;
+  font-size: 2.0em;
+  padding: 10px 0;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: -webkit-linear-gradient(top, rgba(224,243,250,1) 0%,rgba(216,240,252,1) 50%,rgba(184,226,246,1) 51%,rgba(182,223,253,1) 100%);
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.3em;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc
+}
+
+.btn-wide {
+  float: left;
+  width: 100%;
+  font-size: 1.3em;
+  background-color: blue;
+  padding: 15px 0;
+  border-radius: 6px;
+  color: #fff;
+  text-align: center;
+}
+
+#content {
+  margin-top: 70px;
+/*  text-align: center;*/
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background: -webkit-linear-gradient(top, rgba(224,243,250,1) 0%,rgba(216,240,252,1) 50%,rgba(184,226,246,1) 51%,rgba(182,223,253,1) 100%);
+  width: 100%;
+}
+
+
+
+
+a:link {
+  text-decoration:none;
+}
+
+.saved-selection {
+  width: 180px;
+}
+
+nav {
+  margin-top: 100px;
+}
